@@ -1,21 +1,1480 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vinbox — Multilingual DTP & Localised Desktop Publishing Services | Pune, India</title>
-    <meta name="description" content="Vinbox is a specialized Multilingual Desktop Publishing (DTP) & localization agency in Pune, India. Supporting Adobe InDesign, Illustrator, FrameMaker, and complex scripts for global agencies." />
-    <meta property="og:title" content="Vinbox — Multilingual DTP & Localised Desktop Publishing Services" />
-    <meta property="og:description" content="Precision localized layout, typesetting, and pre-press solutions across 100+ languages for marketing agencies, translation companies, and global publishers." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body class="bg-[#FAFAF9] text-zinc-900 antialiased font-sans selection:bg-indigo-100 selection:text-indigo-900">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinbox — Multilingual DTP & Localised Desktop Publishing Services | Pune, India</title>
+  <meta name="description" content="Vinbox is a specialized Multilingual Desktop Publishing (DTP) & localization agency in Pune, India. Supporting Adobe InDesign, Illustrator, FrameMaker, and complex scripts for global agencies.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#312e81',
+            }
+          }
+        }
+      }
+    }
+  </script>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: #FAFAF9;
+      color: #18181B;
+    }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #f4f4f5; }
+    ::-webkit-scrollbar-thumb { background: #d4d4d8; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #a1a1aa; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="antialiased selection:bg-indigo-100 selection:text-indigo-900 min-h-screen flex flex-col">
+
+  <!-- TOP INFO BAR -->
+  <div class="bg-zinc-950 text-zinc-300 text-xs py-1.5 px-4 border-b border-zinc-800 hidden md:block">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-6">
+        <span class="flex items-center space-x-1.5 text-zinc-400">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-zinc-200 font-medium">Pune Delivery Hub:</span>
+          <span>Accepting Global Agency Projects</span>
+        </span>
+        <span class="text-zinc-600">|</span>
+        <span class="text-zinc-400">Response Time: &lt; 2 Hours</span>
+      </div>
+      <div class="flex items-center space-x-6">
+        <a href="mailto:projects@vinbox.in" class="hover:text-white transition-colors">projects@vinbox.in</a>
+        <span class="text-zinc-600">|</span>
+        <a href="tel:+912067890123" class="hover:text-white transition-colors">+91 20 6789 0123</a>
+        <span class="text-zinc-600">|</span>
+        <span class="text-zinc-300 font-medium">100+ Languages &amp; Scripts</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY NAVBAR -->
+  <header id="main-nav" class="sticky top-0 z-40 bg-[#FAFAF9]/95 backdrop-blur-md border-b border-zinc-200/80 transition-all duration-200 py-3.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center space-x-3 group">
+          <div class="w-9 h-9 rounded-lg bg-zinc-900 flex items-center justify-center text-white font-bold tracking-tight text-lg shadow-sm group-hover:bg-indigo-600 transition-colors">
+            V
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-bold tracking-tight text-zinc-900 leading-none">VINBOX</span>
+            <span class="text-[10px] tracking-widest uppercase font-semibold text-zinc-500 mt-0.5">DTP &amp; Localisation</span>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-zinc-600">
+          <a href="#about" class="hover:text-zinc-900 transition-colors py-1">About</a>
+          <a href="#services" class="hover:text-zinc-900 transition-colors py-1">Services</a>
+          <a href="#scripts" class="hover:text-zinc-900 transition-colors py-1">Scripts Matrix</a>
+          <a href="#portfolio" class="hover:text-zinc-900 transition-colors py-1">Work</a>
+          <a href="#process" class="hover:text-zinc-900 transition-colors py-1">Process</a>
+          <a href="#estimator" class="hover:text-zinc-900 transition-colors py-1">Estimate Tool</a>
+          <a href="#faq" class="hover:text-zinc-900 transition-colors py-1">FAQ</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="hidden sm:flex items-center space-x-4">
+          <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg bg-zinc-900 text-white hover:bg-zinc-800 transition-colors shadow-sm">
+            <span>Request a Quote</span>
+            <svg class="w-4 h-4 ml-1.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <div class="flex items-center lg:hidden">
+          <button id="mobile-menu-btn" type="button" class="p-2 rounded-lg text-zinc-700 hover:text-zinc-900 hover:bg-zinc-100 focus:outline-none" aria-label="Toggle navigation">
+            <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-zinc-200 bg-white px-4 pt-3 pb-6 space-y-3 shadow-lg">
+      <div class="space-y-1">
+        <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-700 hover:text-zinc-900 hover:bg-zinc-50">About</a>
+        <a href="#services" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-700 hover:text-zinc-900 hover:bg-zinc-50">Services</a>
+        <a href="#scripts" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-700 hover:text-zinc-900 hover:bg-zinc-50">Scripts Matrix</a>
+        <a href="#portfolio" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-700 hover:text-zinc-900 hover:bg-zinc-50">Work</a>
+        <a href="#process" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-700 hover:text-zinc-900 hover:bg-zinc-50">Process</a>
+        <a href="#estimator" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-700 hover:text-zinc-900 hover:bg-zinc-50">Estimate Tool</a>
+        <a href="#faq" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-zinc-700 hover:text-zinc-900 hover:bg-zinc-50">FAQ</a>
+      </div>
+      <div class="pt-3 border-t border-zinc-100 flex flex-col gap-2">
+        <a href="#contact" class="mobile-nav-link w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold rounded-lg bg-zinc-900 text-white hover:bg-zinc-800 transition-colors text-center">
+          <span>Request a Project Quote</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    
+    <!-- 1. HERO SECTION -->
+    <section class="relative overflow-hidden pt-8 pb-16 md:pt-14 md:pb-24 border-b border-zinc-200/70 bg-[#FAFAF9]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Left Column -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-zinc-100 border border-zinc-200 text-xs font-medium text-zinc-800">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
+              <span class="font-semibold tracking-wide uppercase text-[11px] text-zinc-700">Pune, India • Multilingual DTP Hub</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-zinc-900 tracking-tight leading-[1.15]">
+              Precision Desktop Publishing for Global Translation &amp; Marketing Agencies.
+            </h1>
+
+            <p class="text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl">
+              Vinbox formats complex translated documents across Adobe InDesign, FrameMaker, Illustrator, and QuarkXPress in 100+ languages. We master text expansion, right-to-left mirroring, Indic conjuncts, and CJK typography with guaranteed pre-press compliance.
+            </p>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+              <a href="#contact" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-zinc-900 text-white font-semibold text-sm hover:bg-zinc-800 transition-all shadow-sm group">
+                <span>Request Project Quote</span>
+                <svg class="w-4 h-4 ml-2 text-zinc-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </a>
+              <a href="#portfolio" class="inline-flex items-center justify-center px-5 py-3.5 rounded-lg bg-white border border-zinc-300 text-zinc-800 font-medium text-sm hover:bg-zinc-50 hover:border-zinc-400 transition-all">
+                <span>View Sample Work</span>
+              </a>
+            </div>
+
+            <div class="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-zinc-600">
+              <div class="flex items-center space-x-2">
+                <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span>100+ LTR &amp; RTL Scripts</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span>Native InDesign &amp; FM</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span>2-Hour Quote Response</span>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-zinc-200/80 flex items-center space-x-3 text-xs text-zinc-500">
+              <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              <span>Trusted by Language Service Providers &amp; Marketing Teams in <strong>Pune, Europe, North America &amp; APAC</strong>.</span>
+            </div>
+          </div>
+
+          <!-- Right Column Preview Card -->
+          <div class="lg:col-span-5">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <div class="bg-white border border-zinc-200 rounded-xl shadow-md overflow-hidden">
+                <div class="bg-zinc-900 px-4 py-3 text-white flex items-center justify-between text-xs">
+                  <span class="font-mono text-zinc-200">Vinbox_DTP_Master_Layout.indd</span>
+                  <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px] font-semibold border border-emerald-500/30">QA Passed: 100%</span>
+                </div>
+                <div class="relative aspect-4/3 bg-zinc-100 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&q=80" alt="Vinbox DTP typesetting and layout" class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent flex flex-col justify-end p-4 text-white">
+                    <span class="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-white/20 backdrop-blur-xs rounded w-max mb-1">Simultaneous 14-Language Release</span>
+                    <p class="text-xs text-zinc-200 font-medium">Automated IDML ingestion, bidirectional script mirroring &amp; pre-flight print validation.</p>
+                  </div>
+                </div>
+                <div class="p-4 bg-zinc-50/70 border-t border-zinc-100 space-y-2.5 text-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="text-zinc-500 font-medium">Script Engines:</span>
+                    <div class="flex gap-1">
+                      <span class="px-2 py-0.5 rounded bg-zinc-200/70 text-zinc-700 text-[11px]">Latin</span>
+                      <span class="px-2 py-0.5 rounded bg-zinc-200/70 text-zinc-700 text-[11px]">Arabic (RTL)</span>
+                      <span class="px-2 py-0.5 rounded bg-zinc-200/70 text-zinc-700 text-[11px]">Indic</span>
+                      <span class="px-2 py-0.5 rounded bg-zinc-200/70 text-zinc-700 text-[11px]">CJK</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between pt-2 border-t border-zinc-200/60">
+                    <span class="text-zinc-500 font-medium">Prepress Standard:</span>
+                    <span class="font-mono text-zinc-800 text-[11px] font-semibold">PDF/X-4 CMYK + Bleed</span>
+                  </div>
+                  <div class="flex items-center justify-between pt-2 border-t border-zinc-200/60">
+                    <span class="text-zinc-500 font-medium">Turnaround Speed:</span>
+                    <span class="text-indigo-600 font-semibold text-[11px]">Overnight Delivery to US/EU</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. TRUST / CREDIBILITY BAR -->
+    <section class="bg-white border-b border-zinc-200/80 py-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div class="p-3 rounded-lg hover:bg-zinc-50 transition-colors">
+            <span class="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 block">12+</span>
+            <p class="text-sm font-semibold text-zinc-800 mt-1">Years of DTP Excellence</p>
+            <p class="text-xs text-zinc-500">Serving global agencies since 2012</p>
+          </div>
+          <div class="p-3 rounded-lg hover:bg-zinc-50 transition-colors">
+            <span class="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 block">100+</span>
+            <p class="text-sm font-semibold text-zinc-800 mt-1">Languages &amp; Scripts</p>
+            <p class="text-xs text-zinc-500">LTR, RTL, Indic, CJK &amp; Cyrillic</p>
+          </div>
+          <div class="p-3 rounded-lg hover:bg-zinc-50 transition-colors">
+            <span class="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 block">5,400+</span>
+            <p class="text-sm font-semibold text-zinc-800 mt-1">Completed Publications</p>
+            <p class="text-xs text-zinc-500">Catalogs, manuals &amp; packaging</p>
+          </div>
+          <div class="p-3 rounded-lg hover:bg-zinc-50 transition-colors">
+            <span class="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 block">99.8%</span>
+            <p class="text-sm font-semibold text-zinc-800 mt-1">First-Pass QA Acceptance</p>
+            <p class="text-xs text-zinc-500">Dual-stage linguistic &amp; preflight sign-off</p>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-8 border-t border-zinc-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <span class="text-xs font-semibold uppercase tracking-wider text-zinc-400 shrink-0">Native File Formats &amp; Toolstack:</span>
+          <div class="flex flex-wrap gap-2 items-center">
+            <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 text-zinc-700 border border-zinc-200">Adobe InDesign CC</span>
+            <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 text-zinc-700 border border-zinc-200">Adobe FrameMaker</span>
+            <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 text-zinc-700 border border-zinc-200">Adobe Illustrator</span>
+            <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 text-zinc-700 border border-zinc-200">QuarkXPress</span>
+            <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 text-zinc-700 border border-zinc-200">Figma</span>
+            <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 text-zinc-700 border border-zinc-200">SDL Trados / memoQ</span>
+            <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 text-zinc-700 border border-zinc-200">PDF/X-4 Certified</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ABOUT SECTION -->
+    <section id="about" class="py-16 md:py-24 bg-[#FAFAF9] border-b border-zinc-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <div class="space-y-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">About Vinbox • Pune, India</span>
+              <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 leading-tight">
+                Your Dedicated Production Partner for Multilingual Desktop Publishing.
+              </h2>
+            </div>
+
+            <div class="space-y-4 text-base text-zinc-600 leading-relaxed">
+              <p>
+                Founded in Pune's technology corridor, Vinbox was built to solve a critical bottleneck for global translation agencies and marketing departments: <strong>post-translation layout distortion</strong>. When copy is translated into German, Arabic, Japanese, or Hindi, standard layouts break, fonts fail, and tables overflow.
+              </p>
+              <p>
+                Our specialized team of DTP operators, font engineers, and pre-press specialists reconstruct your source InDesign, FrameMaker, and Illustrator files. We balance text expansion, apply language-specific hyphenation dictionaries, and mirror right-to-left layout geometry while strictly preserving your client's visual brand integrity.
+              </p>
+              <p>
+                Operating from Pune (UTC+5:30), we offer global agencies an effortless overnight turnaround advantage. Upload your translated bilingual files at the close of your business day, and receive fully typeset, QA-inspected, press-ready deliverables when your team logs in the next morning.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+              <div class="p-3 rounded-lg bg-white border border-zinc-200 shadow-xs">
+                <h4 class="text-sm font-semibold text-zinc-900">Complex Script Mastery</h4>
+                <p class="text-xs text-zinc-500 mt-0.5">Native handling of Arabic RTL, Indic conjuncts, and CJK line rules.</p>
+              </div>
+              <div class="p-3 rounded-lg bg-white border border-zinc-200 shadow-xs">
+                <h4 class="text-sm font-semibold text-zinc-900">Overnight Agency Agility</h4>
+                <p class="text-xs text-zinc-500 mt-0.5">Time-zone leverage delivering completed layouts by morning.</p>
+              </div>
+            </div>
+
+            <div class="pt-2 flex items-center space-x-4">
+              <a href="#services" class="inline-flex items-center text-sm font-semibold text-zinc-900 hover:text-indigo-600 transition-colors">
+                <span>Explore all DTP capabilities &rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl overflow-hidden border border-zinc-200 shadow-sm bg-white">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Vinbox DTP production studio in Pune" class="w-full h-72 sm:h-80 object-cover">
+              <div class="p-6 bg-white space-y-3 text-xs text-zinc-600">
+                <div class="flex items-center justify-between pb-3 border-b border-zinc-100">
+                  <span class="font-bold text-zinc-900 text-sm">Vinbox Delivery Studio</span>
+                  <span class="font-mono px-2 py-0.5 rounded bg-zinc-100 text-zinc-600 border border-zinc-200">Pune, India</span>
+                </div>
+                <p>Level 4, Synergy Commercial Hub, Baner High Street, Pune 411045, Maharashtra, India</p>
+                <div class="pt-2 border-t border-zinc-100 flex justify-between font-medium">
+                  <span>First-pass pre-press accuracy:</span>
+                  <span class="text-emerald-600 font-bold">99.8%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SERVICES SECTION -->
+    <section id="services" class="py-16 md:py-24 bg-white border-b border-zinc-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Core DTP Capabilities</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mt-2">
+            Engineered Desktop Publishing for Every Language &amp; Format.
+          </h2>
+          <p className="text-base text-zinc-600 mt-3">
+            From single marketing leaflets to 1,000-page automotive workshop manuals, we deliver print-ready and digital localized files that match your source design flawlessly.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          
+          <!-- Service 1 -->
+          <div class="p-6 sm:p-7 rounded-xl bg-[#FAFAF9] border border-zinc-200 hover:border-zinc-300 transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-9 h-9 rounded-lg bg-white border border-zinc-200 flex items-center justify-center text-zinc-800">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+              </div>
+              <h3 class="text-lg font-bold text-zinc-900">Multilingual Layout &amp; Typesetting</h3>
+              <p class="text-sm text-zinc-600 leading-relaxed">
+                Pixel-perfect desktop publishing in Adobe InDesign, Illustrator, and QuarkXPress across Latin, Cyrillic, Indic, and Asian scripts.
+              </p>
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">InDesign CC</span>
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">Illustrator</span>
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">QuarkXPress</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-5 border-t border-zinc-200/60 text-xs font-semibold text-zinc-900">
+              Deliverables: Layered INDD + Print-ready PDF/X
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="p-6 sm:p-7 rounded-xl bg-[#FAFAF9] border border-zinc-200 hover:border-zinc-300 transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-9 h-9 rounded-lg bg-white border border-zinc-200 flex items-center justify-center text-zinc-800">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+              </div>
+              <h3 class="text-lg font-bold text-zinc-900">RTL &amp; Bidirectional Formatting</h3>
+              <p class="text-sm text-zinc-600 leading-relaxed">
+                Complete right-to-left layout mirroring, numeral adaptation, and bidirectional text flow for Arabic, Hebrew, Urdu, and Farsi.
+              </p>
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">InDesign ME</span>
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">World-Ready</span>
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">Arabic / Hebrew</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-5 border-t border-zinc-200/60 text-xs font-semibold text-zinc-900">
+              Deliverables: Mirrored geometry &amp; Nastaliq type
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="p-6 sm:p-7 rounded-xl bg-[#FAFAF9] border border-zinc-200 hover:border-zinc-300 transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-9 h-9 rounded-lg bg-white border border-zinc-200 flex items-center justify-center text-zinc-800">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              </div>
+              <h3 class="text-lg font-bold text-zinc-900">Technical Manuals &amp; FrameMaker</h3>
+              <p class="text-sm text-zinc-600 leading-relaxed">
+                High-volume technical documentation formatting, FrameMaker to InDesign conversions, and structured XML/DITA publishing.
+              </p>
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">FrameMaker</span>
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">DITA / XML</span>
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">RoboHelp</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-5 border-t border-zinc-200/60 text-xs font-semibold text-zinc-900">
+              Deliverables: Multi-volume books &amp; TOC automation
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="p-6 sm:p-7 rounded-xl bg-[#FAFAF9] border border-zinc-200 hover:border-zinc-300 transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-9 h-9 rounded-lg bg-white border border-zinc-200 flex items-center justify-center text-zinc-800">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+              </div>
+              <h3 class="text-lg font-bold text-zinc-900">Graphic &amp; Artwork Localization</h3>
+              <p class="text-sm text-zinc-600 leading-relaxed">
+                Vector graphics text extraction, layered artwork adaptation, localized screenshot replacement, and packaging prepress.
+              </p>
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">Illustrator</span>
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">Photoshop</span>
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">Figma</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-5 border-t border-zinc-200/60 text-xs font-semibold text-zinc-900">
+              Deliverables: Layered AI/PSD with native text
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="p-6 sm:p-7 rounded-xl bg-[#FAFAF9] border border-zinc-200 hover:border-zinc-300 transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-9 h-9 rounded-lg bg-white border border-zinc-200 flex items-center justify-center text-zinc-800">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              </div>
+              <h3 class="text-lg font-bold text-zinc-900">E-Learning &amp; Digital Decks</h3>
+              <p class="text-sm text-zinc-600 leading-relaxed">
+                Localizing digital courses, interactive presentations, Canva decks, and slide layouts without breaking interactive triggers.
+              </p>
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">Storyline 360</span>
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">Captivate</span>
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">PowerPoint</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-5 border-t border-zinc-200/60 text-xs font-semibold text-zinc-900">
+              Deliverables: Localized .story / .cptx packages
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="p-6 sm:p-7 rounded-xl bg-[#FAFAF9] border border-zinc-200 hover:border-zinc-300 transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-9 h-9 rounded-lg bg-white border border-zinc-200 flex items-center justify-center text-zinc-800">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              </div>
+              <h3 class="text-lg font-bold text-zinc-900">Pre-Press QA &amp; Linguistic DTP</h3>
+              <p class="text-sm text-zinc-600 leading-relaxed">
+                Rigorous pre-flight quality checks, font license compliance, color separation (CMYK/Pantone), and native DTP proofing.
+              </p>
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">PitStop Pro</span>
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">Acrobat Preflight</span>
+                <span class="px-2 py-0.5 rounded bg-white text-zinc-700 text-xs border border-zinc-200">ISO 17100</span>
+              </div>
+            </div>
+            <div class="pt-5 mt-5 border-t border-zinc-200/60 text-xs font-semibold text-zinc-900">
+              Deliverables: Signed QA checklist &amp; PDF/X
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. SCRIPT MATRIX SECTION -->
+    <section id="scripts" class="py-16 md:py-24 bg-[#FAFAF9] border-b border-zinc-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">DTP Linguistic Intelligence</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mt-2">
+            Interactive Script &amp; Text Expansion Matrix.
+          </h2>
+          <p class="text-base text-zinc-600 mt-3">
+            Every writing system possesses unique typographical physics. See how Vinbox balances font metrics, expansion buffers, and bidirectional flow across 100+ global languages.
+          </p>
+        </div>
+
+        <!-- Script Tabs -->
+        <div class="flex overflow-x-auto pb-2 mb-8 gap-2 no-scrollbar border-b border-zinc-200/70" id="script-tabs">
+          <button type="button" onclick="selectScript('indic')" id="tab-indic" class="script-tab px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-t-lg transition-all border-b-2 border-indigo-600 text-zinc-900 bg-white shadow-xs">Indic &amp; South Asian</button>
+          <button type="button" onclick="selectScript('rtl')" id="tab-rtl" class="script-tab px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-t-lg transition-all border-b-2 border-transparent text-zinc-500 hover:text-zinc-800">Right-To-Left (Arabic/Hebrew)</button>
+          <button type="button" onclick="selectScript('cjk')" id="tab-cjk" class="script-tab px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-t-lg transition-all border-b-2 border-transparent text-zinc-500 hover:text-zinc-800">East Asian (CJK)</button>
+          <button type="button" onclick="selectScript('european')" id="tab-european" class="script-tab px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-t-lg transition-all border-b-2 border-transparent text-zinc-500 hover:text-zinc-800">European &amp; Cyrillic</button>
+          <button type="button" onclick="selectScript('se_asian')" id="tab-se_asian" class="script-tab px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-t-lg transition-all border-b-2 border-transparent text-zinc-500 hover:text-zinc-800">Southeast Asian (Thai/Viet)</button>
+        </div>
+
+        <!-- Dynamic Container -->
+        <div class="bg-white rounded-2xl border border-zinc-200 shadow-sm p-6 sm:p-8 lg:p-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <div class="lg:col-span-6 space-y-5">
+              <div>
+                <span id="script-factor" class="inline-flex items-center text-xs font-semibold px-2.5 py-1 rounded bg-indigo-50 text-indigo-700 mb-2">+15% to +25% expansion</span>
+                <h3 id="script-title" class="text-xl sm:text-2xl font-bold text-zinc-900">Indic &amp; South Asian (Hindi, Marathi, Tamil, Bengali)</h3>
+              </div>
+
+              <div class="space-y-1.5">
+                <span class="text-xs font-semibold uppercase tracking-wider text-zinc-400">Target Scripts in this Family:</span>
+                <p id="script-languages" class="text-xs font-medium text-zinc-800">Devanagari (Hindi, Marathi), Tamil, Telugu, Bengali, Gujarati, Kannada, Malayalam</p>
+              </div>
+
+              <div class="space-y-2 pt-2">
+                <span class="text-xs font-semibold uppercase tracking-wider text-zinc-400">Vinbox Typesetting Rules &amp; Safeguards:</span>
+                <ul id="script-rules" class="space-y-1.5 text-xs text-zinc-700">
+                  <li class="flex items-start"><span class="text-emerald-600 mr-2">&check;</span> Complex conjunct consonants (Matras) requiring Unicode OpenType engines</li>
+                  <li class="flex items-start"><span class="text-emerald-600 mr-2">&check;</span> Vertical ascender/descender clearance to prevent text clipping</li>
+                  <li class="flex items-start"><span class="text-emerald-600 mr-2">&check;</span> Strict prevention of improper syllable splitting at line breaks</li>
+                </ul>
+              </div>
+
+              <div class="p-3.5 rounded-lg bg-zinc-50 border border-zinc-200 text-xs text-zinc-600">
+                <span class="font-semibold text-zinc-800">Font Compliance: </span>
+                <span id="script-font">Optimized with Noto Sans Devanagari, Mangal, Kohinoor, and custom licensed Indian typefaces.</span>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6">
+              <div class="p-5 rounded-xl bg-[#FAFAF9] border border-zinc-200 space-y-4">
+                <div class="flex items-center justify-between text-xs pb-2 border-b border-zinc-200">
+                  <span class="font-semibold uppercase tracking-wider text-zinc-500">Typesetting Visual Preview</span>
+                  <span class="text-indigo-600 font-mono text-[11px]">Auto-Adjusted Metrics</span>
+                </div>
+                
+                <div>
+                  <span class="text-[11px] text-zinc-400 block mb-1">Source English Header (100% Base):</span>
+                  <div class="p-3 rounded-lg bg-white border border-zinc-200 text-sm font-semibold text-zinc-800" id="script-sample-en">
+                    "Precision Engineering for Global Industries"
+                  </div>
+                </div>
+
+                <div>
+                  <span class="text-[11px] text-zinc-400 block mb-1">Vinbox Typeset &amp; Localized Output (Zero Text Clipping):</span>
+                  <div class="p-4 rounded-lg bg-white border-2 border-indigo-100 text-sm font-semibold text-indigo-950" id="script-sample-loc">
+                    वैश्विक उद्योगों के लिए सटीक अभियांत्रिकी (Devanagari / Hindi)
+                  </div>
+                </div>
+
+                <p class="text-[11px] text-zinc-500 pt-1">
+                  Our DTP team verifies diacritic clearance and optical baseline alignment before exporting print-ready PDFs.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. PORTFOLIO / WORK SECTION -->
+    <section id="portfolio" class="py-16 md:py-24 bg-white border-b border-zinc-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div class="max-w-2xl">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Agency Case Studies</span>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mt-2">
+              Proven DTP Excellence Across Global Formats.
+            </h2>
+            <p class="text-base text-zinc-600 mt-3">
+              Explore how our Pune DTP production pod resolves complex layout challenges, rush multi-language releases, and strict regulatory standards.
+            </p>
+          </div>
+
+          <!-- Category Filters -->
+          <div class="flex flex-wrap gap-2" id="portfolio-filters">
+            <button type="button" onclick="filterPortfolio('all')" class="port-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-zinc-900 text-white" id="filter-all">All</button>
+            <button type="button" onclick="filterPortfolio('manuals')" class="port-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-zinc-100 text-zinc-600 hover:bg-zinc-200" id="filter-manuals">Technical Manuals</button>
+            <button type="button" onclick="filterPortfolio('packaging')" class="port-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-zinc-100 text-zinc-600 hover:bg-zinc-200" id="filter-packaging">Packaging</button>
+            <button type="button" onclick="filterPortfolio('marketing')" class="port-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-zinc-100 text-zinc-600 hover:bg-zinc-200" id="filter-marketing">Marketing</button>
+            <button type="button" onclick="filterPortfolio('elearning')" class="port-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-zinc-100 text-zinc-600 hover:bg-zinc-200" id="filter-elearning">E-Learning</button>
+          </div>
+        </div>
+
+        <!-- Portfolio Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="portfolio-grid">
+          
+          <!-- Card 1 -->
+          <div class="port-card port-manuals rounded-2xl border border-zinc-200 overflow-hidden bg-[#FAFAF9] flex flex-col justify-between">
+            <div class="relative aspect-16/9 bg-zinc-200 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Heavy Machinery Manual" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-white/95 text-zinc-900 shadow-xs">Technical Manuals</span>
+              <span class="absolute bottom-3 right-3 px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-zinc-900/80 text-zinc-200">9 Days Turnaround</span>
+            </div>
+            <div class="p-6 space-y-3">
+              <span class="text-[11px] font-semibold uppercase tracking-wider text-zinc-400">Global Equipment Manufacturer</span>
+              <h3 class="text-xl font-bold text-zinc-900">420-Page Heavy Machinery Service Manual</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                420 pages × 7 languages (German, Spanish, French, Russian, Arabic, Japanese, Hindi). Mirrored 1,800 CAD vector schematics in Adobe FrameMaker &amp; InDesign CC.
+              </p>
+              <div class="pt-3 border-t border-zinc-200 flex justify-between text-xs text-zinc-500 font-medium">
+                <span>2,940 Total Pages</span>
+                <span class="text-emerald-600 font-semibold">100% First-Pass Approval</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="port-card port-packaging rounded-2xl border border-zinc-200 overflow-hidden bg-[#FAFAF9] flex flex-col justify-between">
+            <div class="relative aspect-16/9 bg-zinc-200 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80" alt="Luxury Packaging" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-white/95 text-zinc-900 shadow-xs">Packaging &amp; Retail</span>
+              <span class="absolute bottom-3 right-3 px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-zinc-900/80 text-zinc-200">5 Days Turnaround</span>
+            </div>
+            <div class="p-6 space-y-3">
+              <span class="text-[11px] font-semibold uppercase tracking-wider text-zinc-400">European Skincare Brand</span>
+              <h3 class="text-xl font-bold text-zinc-900">Luxury Cosmetic Packaging &amp; Compliance Dielines</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                64 SKU packaging cartons localized into Arabic (GCC Regulatory), Hebrew, Japanese, Korean, and Traditional Chinese with 5pt micro-print compliance in Illustrator.
+              </p>
+              <div class="pt-3 border-t border-zinc-200 flex justify-between text-xs text-zinc-500 font-medium">
+                <span>64 Unique SKUs</span>
+                <span class="text-emerald-600 font-semibold">Zero Color/Plate Shift</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="port-card port-marketing rounded-2xl border border-zinc-200 overflow-hidden bg-[#FAFAF9] flex flex-col justify-between">
+            <div class="relative aspect-16/9 bg-zinc-200 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&q=80" alt="Enterprise Marketing Whitepaper" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-white/95 text-zinc-900 shadow-xs">Marketing &amp; Collateral</span>
+              <span class="absolute bottom-3 right-3 px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-zinc-900/80 text-zinc-200">72 Hours Rush</span>
+            </div>
+            <div class="p-6 space-y-3">
+              <span class="text-[11px] font-semibold uppercase tracking-wider text-zinc-400">Silicon Valley Cloud Platform</span>
+              <h3 class="text-xl font-bold text-zinc-900">Enterprise SaaS Marketing Collateral &amp; Whitepapers</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                12 multi-page case studies and flagship whitepapers localized into German, French, Italian, Portuguese, Japanese, and Chinese InDesign CC layouts.
+              </p>
+              <div class="pt-3 border-t border-zinc-200 flex justify-between text-xs text-zinc-500 font-medium">
+                <span>6 Global Regions</span>
+                <span class="text-emerald-600 font-semibold">Simultaneous Launch</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="port-card port-elearning rounded-2xl border border-zinc-200 overflow-hidden bg-[#FAFAF9] flex flex-col justify-between">
+            <div class="relative aspect-16/9 bg-zinc-200 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Medical E-Learning Modules" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-white/95 text-zinc-900 shadow-xs">E-Learning &amp; Digital</span>
+              <span class="absolute bottom-3 right-3 px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-zinc-900/80 text-zinc-200">12 Days Turnaround</span>
+            </div>
+            <div class="p-6 space-y-3">
+              <span class="text-[11px] font-semibold uppercase tracking-wider text-zinc-400">Healthcare Education Provider</span>
+              <h3 class="text-xl font-bold text-zinc-900">Interactive Medical E-Learning Certification</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                18 interactive Articulate Storyline courses (450 slides) localized into Spanish, Portuguese, Turkish, Arabic, Thai, and Vietnamese with audio timing sync.
+              </p>
+              <div class="pt-3 border-t border-zinc-200 flex justify-between text-xs text-zinc-500 font-medium">
+                <span>25k+ Certified Users</span>
+                <span class="text-emerald-600 font-semibold">SCORM Compliant</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. PROCESS SECTION -->
+    <section id="process" class="py-16 md:py-24 bg-[#FAFAF9] border-b border-zinc-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-14">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Precision Workflow</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mt-2">
+            Structured 4-Step Production &amp; QA Process.
+          </h2>
+          <p class="text-base text-zinc-600 mt-3">
+            Every document passes through our ISO-aligned pipeline to guarantee flawless font licensing, zero layout corruption, and 100% pre-press validation.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          
+          <div class="p-6 sm:p-7 rounded-2xl bg-white border border-zinc-200 shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl sm:text-3xl font-bold font-mono text-zinc-300">01</span>
+                <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+              </div>
+              <h3 class="text-base font-bold text-zinc-900 mb-2">File Intake &amp; Font Audit</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                We analyze source packages (INDD, AI, FrameMaker, Figma), perform font checks, and identify text expansion risks before typesetting.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-100 text-[11px] text-zinc-400 font-mono">Phase 1 • Intake</div>
+          </div>
+
+          <div class="p-6 sm:p-7 rounded-2xl bg-white border border-zinc-200 shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl sm:text-3xl font-bold font-mono text-zinc-300">02</span>
+                <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+              </div>
+              <h3 class="text-base font-bold text-zinc-900 mb-2">IDML Ingestion &amp; Typesetting</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                Our DTP specialists import localized bilingual files, apply script-specific typography rules, and re-balance layout containers.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-100 text-[11px] text-zinc-400 font-mono">Phase 2 • Typeset</div>
+          </div>
+
+          <div class="p-6 sm:p-7 rounded-2xl bg-white border border-zinc-200 shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl sm:text-3xl font-bold font-mono text-zinc-300">03</span>
+                <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+              </div>
+              <h3 class="text-base font-bold text-zinc-900 mb-2">Dual-Pass Linguistic &amp; Preflight QA</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                Automated preflight checks for overprint and bleed, followed by a meticulous side-by-side linguistic overlay review.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-100 text-[11px] text-zinc-400 font-mono">Phase 3 • Quality Gate</div>
+          </div>
+
+          <div class="p-6 sm:p-7 rounded-2xl bg-white border border-zinc-200 shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl sm:text-3xl font-bold font-mono text-zinc-300">04</span>
+                <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+              </div>
+              <h3 class="text-base font-bold text-zinc-900 mb-2">Final Delivery &amp; Packaged Assets</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                We deliver organized native source packages (INDD + links + fonts) along with certified print-ready and web-ready PDFs.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-zinc-100 text-[11px] text-zinc-400 font-mono">Phase 4 • Sign-Off</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. ESTIMATOR TOOL -->
+    <section id="estimator" class="py-16 md:py-24 bg-white border-b border-zinc-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Interactive Planning Tool</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mt-2">
+            Instant DTP Scope &amp; Production Estimator.
+          </h2>
+          <p class="text-base text-zinc-600 mt-3">
+            Quickly model project velocity, team sizing, and deliverables based on your source document volume and target language matrix.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Controls -->
+          <div class="lg:col-span-7 bg-[#FAFAF9] border border-zinc-200 rounded-2xl p-6 sm:p-8 space-y-6">
+            
+            <div class="space-y-2">
+              <label class="text-xs font-bold uppercase tracking-wider text-zinc-700 block">1. Source Document Format &amp; Application</label>
+              <select id="calc-format" onchange="recalculateEstimator()" class="w-full bg-white border border-zinc-300 rounded-lg px-3.5 py-2.5 text-sm font-medium text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-900">
+                <option value="Adobe InDesign (Marketing Collateral / Catalog)">Adobe InDesign CC (Brochure, Catalog, Annual Report)</option>
+                <option value="Adobe FrameMaker (Technical Workshop Manual)">Adobe FrameMaker Book (Automotive/Engineering Manual)</option>
+                <option value="Adobe Illustrator (Packaging Dielines &amp; Labels)">Adobe Illustrator / Packaging Dielines &amp; Labels</option>
+                <option value="Articulate Storyline / Captivate E-Learning">Articulate Storyline / Captivate E-Learning Module</option>
+                <option value="Figma / Multi-Language Digital Assets">Figma / Multi-Language Digital Banners &amp; Assets</option>
+                <option value="Microsoft Office (Word / PowerPoint)">Microsoft Office (Word Documentation / PowerPoint)</option>
+              </select>
+            </div>
+
+            <div class="space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <label class="font-bold uppercase tracking-wider text-zinc-700">2. Source Document Page Count</label>
+                <span id="calc-pages-display" class="font-mono font-bold text-sm text-zinc-900 bg-white px-2.5 py-0.5 rounded border border-zinc-200">32 Pages</span>
+              </div>
+              <input type="range" id="calc-pages" min="1" max="300" step="1" value="32" oninput="recalculateEstimator()" class="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-zinc-900">
+            </div>
+
+            <div class="space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <label class="font-bold uppercase tracking-wider text-zinc-700">3. Number of Target Languages</label>
+                <span id="calc-langs-display" class="font-mono font-bold text-sm text-zinc-900 bg-white px-2.5 py-0.5 rounded border border-zinc-200">4 Languages</span>
+              </div>
+              <input type="range" id="calc-langs" min="1" max="24" step="1" value="4" oninput="recalculateEstimator()" class="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-zinc-900">
+            </div>
+
+            <div class="space-y-2">
+              <label class="text-xs font-bold uppercase tracking-wider text-zinc-700 block">4. Turnaround Priority</label>
+              <div class="grid grid-cols-3 gap-2.5">
+                <button type="button" onclick="setTurnaround('Standard (48-72h)')" id="prio-std" class="turnaround-btn p-2.5 rounded-lg text-center text-xs font-semibold border border-indigo-600 bg-indigo-50 text-indigo-900">Standard (48-72h)</button>
+                <button type="button" onclick="setTurnaround('Rush Overnight (24h)')" id="prio-rush" class="turnaround-btn p-2.5 rounded-lg text-center text-xs font-semibold border border-zinc-200 bg-white text-zinc-700">Rush Overnight (24h)</button>
+                <button type="button" onclick="setTurnaround('Enterprise Sprint')" id="prio-sprint" class="turnaround-btn p-2.5 rounded-lg text-center text-xs font-semibold border border-zinc-200 bg-white text-zinc-700">Enterprise Sprint</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Summary Output -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="bg-zinc-900 text-white rounded-2xl p-6 sm:p-7 shadow-lg space-y-5">
+              <div class="flex items-center justify-between pb-3 border-b border-zinc-800">
+                <span class="font-bold text-sm">Scope Estimate Summary</span>
+                <span id="calc-total-volume" class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono text-[11px]">128 Processed Pages</span>
+              </div>
+
+              <div>
+                <span class="text-zinc-400 text-xs font-semibold uppercase tracking-wider block">Estimated Turnaround</span>
+                <p id="calc-turnaround-res" class="text-2xl font-bold text-white mt-0.5">48 hours</p>
+                <p class="text-xs text-zinc-400 mt-0.5">Calculated for Pune production pod with two-pass QA.</p>
+              </div>
+
+              <div class="pt-3 border-t border-zinc-800">
+                <span class="text-zinc-400 text-xs font-semibold uppercase tracking-wider block">Allocated Pod Team</span>
+                <p id="calc-team-res" class="text-sm font-semibold text-zinc-200 mt-0.5">1 Dedicated DTP Specialist + 1 QA Lead</p>
+              </div>
+
+              <div class="pt-3 border-t border-zinc-800 text-xs text-zinc-300 space-y-1.5">
+                <div class="flex items-center"><span class="text-emerald-400 mr-2">&check;</span> Layered source packages (INDD / AI / FM)</div>
+                <div class="flex items-center"><span class="text-emerald-400 mr-2">&check;</span> Certified PDF/X-4 print-ready files with bleed</div>
+                <div class="flex items-center"><span class="text-emerald-400 mr-2">&check;</span> Signed DTP QA Checklist</div>
+              </div>
+
+              <div class="pt-2">
+                <button type="button" onclick="applyEstimateToQuote()" class="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl bg-white text-zinc-950 font-bold text-sm hover:bg-zinc-100 transition-colors shadow-sm">
+                  <span>Apply Estimate to Quote Request &rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. TESTIMONIALS SECTION -->
+    <section id="testimonials" class="py-16 md:py-24 bg-[#FAFAF9] border-b border-zinc-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Client Endorsements</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mt-2">
+            Trusted by Localization Leads &amp; Agency Directors.
+          </h2>
+          <p class="text-base text-zinc-600 mt-3">
+            Read what global translation providers, creative agencies, and enterprise brands say about our typographic precision and turnaround speed.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          
+          <div class="p-6 sm:p-8 rounded-2xl bg-white border border-zinc-200 shadow-xs flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="text-amber-400 text-sm tracking-widest">&starf;&starf;&starf;&starf;&starf;</div>
+              <p class="text-sm text-zinc-700 leading-relaxed italic">
+                "Vinbox has been our go-to multilingual DTP partner in Pune for over 4 years. Whether we throw a 600-page FrameMaker manual in 14 languages or a rush InDesign catalog for Arabic and Japanese, their typographic accuracy is unmatched."
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-zinc-100 flex items-center space-x-3">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Marcus Vance" class="w-10 h-10 rounded-full object-cover border border-zinc-200">
+              <div>
+                <h4 class="text-sm font-bold text-zinc-900">Marcus Vance</h4>
+                <p class="text-xs text-zinc-500">Director of Localization Ops, London</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-8 rounded-2xl bg-white border border-zinc-200 shadow-xs flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="text-amber-400 text-sm tracking-widest">&starf;&starf;&starf;&starf;&starf;</div>
+              <p class="text-sm text-zinc-700 leading-relaxed italic">
+                "Finding a DTP vendor who truly understands Middle Eastern RTL layout mirroring and Indic font conjuncts used to take us weeks of back-and-forth. Vinbox delivers pristine, ready-to-print PDFs on the very first pass."
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-zinc-100 flex items-center space-x-3">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&q=80" alt="Elena Rostova" class="w-10 h-10 rounded-full object-cover border border-zinc-200">
+              <div>
+                <h4 class="text-sm font-bold text-zinc-900">Elena Rostova</h4>
+                <p class="text-xs text-zinc-500">Senior Project Manager, Berlin</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-8 rounded-2xl bg-white border border-zinc-200 shadow-xs flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="text-amber-400 text-sm tracking-widest">&starf;&starf;&starf;&starf;&starf;</div>
+              <p class="text-sm text-zinc-700 leading-relaxed italic">
+                "Their Pune time zone gives our US agency a tremendous overnight advantage. We upload translation files at 5 PM Pacific Time and wake up to fully formatted InDesign files at 8 AM. Flawless communication."
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-zinc-100 flex items-center space-x-3">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="David K. Lindqvist" class="w-10 h-10 rounded-full object-cover border border-zinc-200">
+              <div>
+                <h4 class="text-sm font-bold text-zinc-900">David K. Lindqvist</h4>
+                <p class="text-xs text-zinc-500">VP Creative Services, San Francisco</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10. FAQ SECTION -->
+    <section id="faq" class="py-16 md:py-24 bg-white border-b border-zinc-200/80">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Frequently Asked Questions</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mt-2">
+            Everything You Need to Know About Our DTP Services.
+          </h2>
+          <p class="text-base text-zinc-600 mt-3">
+            Clear answers on file handoffs, CAT tool integration, turnaround times, and confidentiality.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          
+          <div class="border border-zinc-200 rounded-xl overflow-hidden bg-[#FAFAF9]">
+            <button type="button" onclick="toggleFaq('faq-1')" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-zinc-900 text-sm sm:text-base">
+              <span>Which desktop publishing applications and file formats do you support?</span>
+              <span id="icon-faq-1" class="text-lg font-mono text-zinc-500">&plus;</span>
+            </button>
+            <div id="body-faq-1" class="hidden px-5 pb-5 text-xs sm:text-sm text-zinc-600 leading-relaxed border-t border-zinc-200/60 bg-white pt-3">
+              We support all major professional DTP and design suites: Adobe InDesign (all CC versions), Adobe Illustrator, Adobe Photoshop, Adobe FrameMaker (Structured &amp; Unstructured), QuarkXPress, Figma, Articulate Storyline, Adobe Captivate, Microsoft Office (Word, PowerPoint), CorelDRAW, and XML/DITA.
+            </div>
+          </div>
+
+          <div class="border border-zinc-200 rounded-xl overflow-hidden bg-[#FAFAF9]">
+            <button type="button" onclick="toggleFaq('faq-2')" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-zinc-900 text-sm sm:text-base">
+              <span>Can you work directly with CAT tool exports such as SDL Trados, memoQ, and Phrase?</span>
+              <span id="icon-faq-2" class="text-lg font-mono text-zinc-500">&plus;</span>
+            </button>
+            <div id="body-faq-2" class="hidden px-5 pb-5 text-xs sm:text-sm text-zinc-600 leading-relaxed border-t border-zinc-200/60 bg-white pt-3">
+              Yes! We frequently handle bilingual IDML, XLIFF, MQXLIFF, and TTX files. We extract translatable text from your layout, hand it over cleanly for CAT tool translation, and import the target bilingual files back into InDesign without breaking paragraph styles or master items.
+            </div>
+          </div>
+
+          <div class="border border-zinc-200 rounded-xl overflow-hidden bg-[#FAFAF9]">
+            <button type="button" onclick="toggleFaq('faq-3')" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-zinc-900 text-sm sm:text-base">
+              <span>How do you handle text expansion and contraction during translation?</span>
+              <span id="icon-faq-3" class="text-lg font-mono text-zinc-500">&plus;</span>
+            </button>
+            <div id="body-faq-3" class="hidden px-5 pb-5 text-xs sm:text-sm text-zinc-600 leading-relaxed border-t border-zinc-200/60 bg-white pt-3">
+              Different languages have unique spatial requirements. German or Russian often expands by 25–40%, whereas Japanese or Chinese contracts by 20–30%. Our DTP experts adjust typographic leading, character tracking, column widths, and container margins without compromising design intent.
+            </div>
+          </div>
+
+          <div class="border border-zinc-200 rounded-xl overflow-hidden bg-[#FAFAF9]">
+            <button type="button" onclick="toggleFaq('faq-4')" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-zinc-900 text-sm sm:text-base">
+              <span>Do you sign Non-Disclosure Agreements (NDAs) to protect sensitive client data?</span>
+              <span id="icon-faq-4" class="text-lg font-mono text-zinc-500">&plus;</span>
+            </button>
+            <div id="body-faq-4" class="hidden px-5 pb-5 text-xs sm:text-sm text-zinc-600 leading-relaxed border-t border-zinc-200/60 bg-white pt-3">
+              Absolutely. We handle confidential pre-release product manuals, medical documentation, and proprietary marketing collateral daily. We sign bilateral NDAs and enforce secure encrypted file transfers.
+            </div>
+          </div>
+
+          <div class="border border-zinc-200 rounded-xl overflow-hidden bg-[#FAFAF9]">
+            <button type="button" onclick="toggleFaq('faq-5')" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-zinc-900 text-sm sm:text-base">
+              <span>What is your standard turnaround time and pricing structure?</span>
+              <span id="icon-faq-5" class="text-lg font-mono text-zinc-500">&plus;</span>
+            </button>
+            <div id="body-faq-5" class="hidden px-5 pb-5 text-xs sm:text-sm text-zinc-600 leading-relaxed border-t border-zinc-200/60 bg-white pt-3">
+              Standard projects (under 50 pages) are delivered within 24 to 48 hours. For high-volume technical manuals (300+ pages), we provide scaled pod teams. Pricing can be structured per-page, per-hour, or on a dedicated monthly capacity retainer.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 11. FINAL CTA -->
+    <section class="py-16 md:py-20 bg-zinc-950 text-white relative overflow-hidden border-b border-zinc-800">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs text-zinc-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>Open for Global Translation &amp; Agency Sprints</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
+          Ready to Elevate Your Multilingual Desktop Publishing?
+        </h2>
+        <p class="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+          Send us your sample layout or active project files. We will review font compatibility, text expansion metrics, and provide an accurate quote and timeline within 2 hours.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href="#contact" class="w-full sm:w-auto px-7 py-4 rounded-xl bg-white text-zinc-950 font-bold text-sm hover:bg-zinc-100 transition-all shadow-lg">
+            <span>Request Instant Project Quote &rarr;</span>
+          </a>
+          <a href="#portfolio" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-200 font-semibold text-sm hover:bg-zinc-800">
+            <span>Explore Agency Portfolio</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. CONTACT / RFQ SECTION -->
+    <section id="contact" class="py-16 md:py-24 bg-[#FAFAF9] border-b border-zinc-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Request a Project Quote &amp; Consultation</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mt-2">
+            Let's Discuss Your Multilingual DTP Scope.
+          </h2>
+          <p class="text-base text-zinc-600 mt-3">
+            Submit your project parameters below. Our Pune technical production team will review font requirements, script complexity, and provide a binding quote within 2 hours.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Contact Info -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="bg-white border border-zinc-200 rounded-2xl p-6 sm:p-7 shadow-xs space-y-5 text-sm text-zinc-600">
+              <h3 class="text-lg font-bold text-zinc-900 pb-3 border-b border-zinc-100 flex justify-between items-center">
+                <span>Vinbox Production Hub</span>
+                <span class="text-[11px] font-mono font-semibold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">Online (IST)</span>
+              </h3>
+
+              <div>
+                <span class="font-bold text-zinc-900 block text-xs uppercase tracking-wide">Registered Delivery Center:</span>
+                <p class="text-xs text-zinc-600 mt-1">Level 4, Synergy Commercial Hub, Baner High Street, Pune 411045, Maharashtra, India</p>
+              </div>
+
+              <div class="pt-3 border-t border-zinc-100 space-y-1">
+                <span class="font-bold text-zinc-900 block text-xs uppercase tracking-wide">Email Inquiries:</span>
+                <p class="text-xs"><a href="mailto:projects@vinbox.in" class="font-semibold text-zinc-900 hover:text-indigo-600">projects@vinbox.in</a> (RFQs &amp; Production)</p>
+                <p class="text-xs"><a href="mailto:hello@vinbox.in" class="text-zinc-600 hover:text-indigo-600">hello@vinbox.in</a> (Partnerships)</p>
+              </div>
+
+              <div class="pt-3 border-t border-zinc-100 space-y-1">
+                <span class="font-bold text-zinc-900 block text-xs uppercase tracking-wide">Direct Phone &amp; WhatsApp:</span>
+                <p class="text-xs font-mono">Phone: <a href="tel:+912067890123" class="font-semibold text-zinc-900">+91 20 6789 0123</a></p>
+                <p class="text-xs font-mono">WhatsApp: <a href="https://wa.me/919823011456" target="_blank" class="font-semibold text-emerald-700">+91 98230 11456</a></p>
+              </div>
+
+              <div class="pt-3 border-t border-zinc-100">
+                <span class="font-bold text-zinc-900 block text-xs uppercase tracking-wide">Operating Coverage:</span>
+                <p class="text-xs text-zinc-600 mt-1">Mon – Sat: 08:30 – 21:30 IST (24/6 Global Support covering EST, GMT, CET, JST)</p>
+              </div>
+
+              <div class="p-3 rounded-lg bg-zinc-50 border border-zinc-200 text-xs text-zinc-600">
+                Protected under strict NDA and ISO 27001-aligned data security protocols.
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="lg:col-span-7">
+            <div class="bg-white border border-zinc-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+              
+              <!-- Success Box -->
+              <div id="form-success" class="hidden py-8 text-center space-y-4">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto text-xl font-bold">&check;</div>
+                <h3 class="text-2xl font-bold text-zinc-900">Thank you! Your quote request has been received.</h3>
+                <p class="text-sm text-zinc-600 max-w-md mx-auto">
+                  A dedicated project manager at our Pune hub is reviewing your specifications and will respond within <strong>2 hours</strong>.
+                </p>
+                <button type="button" onclick="resetQuoteForm()" class="px-4 py-2 bg-zinc-900 text-white rounded-lg text-xs font-semibold hover:bg-zinc-800">
+                  Submit Another Request
+                </button>
+              </div>
+
+              <!-- Form Element -->
+              <form id="quote-form" onsubmit="handleQuoteSubmit(event)" class="space-y-4">
+                <div class="border-b border-zinc-100 pb-2">
+                  <h3 class="text-lg font-bold text-zinc-900">Request a Project Quote</h3>
+                  <p class="text-xs text-zinc-500">Fill in your specifications for immediate analysis.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="text-xs font-bold uppercase tracking-wider text-zinc-700 block mb-1">Full Name *</label>
+                    <input type="text" id="form-name" required placeholder="e.g. Sarah Jenkins" class="w-full px-3.5 py-2.5 rounded-lg border border-zinc-300 text-sm focus:ring-2 focus:ring-zinc-900 focus:outline-none">
+                  </div>
+                  <div>
+                    <label class="text-xs font-bold uppercase tracking-wider text-zinc-700 block mb-1">Work Email Address *</label>
+                    <input type="email" id="form-email" required placeholder="name@agency.com" class="w-full px-3.5 py-2.5 rounded-lg border border-zinc-300 text-sm focus:ring-2 focus:ring-zinc-900 focus:outline-none">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="text-xs font-bold uppercase tracking-wider text-zinc-700 block mb-1">Company / Agency</label>
+                    <input type="text" id="form-company" placeholder="e.g. Global Marketing Agency" class="w-full px-3.5 py-2.5 rounded-lg border border-zinc-300 text-sm focus:ring-2 focus:ring-zinc-900 focus:outline-none">
+                  </div>
+                  <div>
+                    <label class="text-xs font-bold uppercase tracking-wider text-zinc-700 block mb-1">Phone / WhatsApp</label>
+                    <input type="tel" id="form-phone" placeholder="+1 (555) 000-0000" class="w-full px-3.5 py-2.5 rounded-lg border border-zinc-300 text-sm focus:ring-2 focus:ring-zinc-900 focus:outline-none">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="text-xs font-bold uppercase tracking-wider text-zinc-700 block mb-1">Service Type</label>
+                    <select id="form-service" class="w-full px-3.5 py-2.5 rounded-lg border border-zinc-300 text-sm focus:ring-2 focus:ring-zinc-900 focus:outline-none">
+                      <option value="Multilingual Layout & Typesetting (InDesign)">Multilingual Layout &amp; Typesetting (InDesign)</option>
+                      <option value="RTL & Bidirectional Formatting (Arabic/Hebrew)">RTL &amp; Bidirectional Formatting (Arabic/Hebrew)</option>
+                      <option value="Technical Documentation & FrameMaker DTP">Technical Documentation &amp; FrameMaker DTP</option>
+                      <option value="Graphic & Packaging Artwork Localization">Graphic &amp; Packaging Artwork Localization</option>
+                      <option value="E-Learning & Digital Collateral Formatting">E-Learning &amp; Digital Collateral Formatting</option>
+                      <option value="Pre-Press QA & Linguistic Inspection">Pre-Press QA &amp; Linguistic Inspection</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="text-xs font-bold uppercase tracking-wider text-zinc-700 block mb-1">Source Format</label>
+                    <select id="form-format" class="w-full px-3.5 py-2.5 rounded-lg border border-zinc-300 text-sm focus:ring-2 focus:ring-zinc-900 focus:outline-none">
+                      <option value="Adobe InDesign (.indd / .idml)">Adobe InDesign (.indd / .idml)</option>
+                      <option value="Adobe FrameMaker (.fm / .book)">Adobe FrameMaker (.fm / .book)</option>
+                      <option value="Adobe Illustrator (.ai / .eps)">Adobe Illustrator (.ai / .eps)</option>
+                      <option value="QuarkXPress (.qxp)">QuarkXPress (.qxp)</option>
+                      <option value="Articulate Storyline (.story)">Articulate Storyline (.story)</option>
+                      <option value="Figma / Sketch">Figma / Sketch</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="text-xs font-bold uppercase tracking-wider text-zinc-700 block mb-1">Target Language(s) &amp; Page Count</label>
+                  <input type="text" id="form-langs" placeholder="e.g. German, French, Arabic (approx. 48 pages)" class="w-full px-3.5 py-2.5 rounded-lg border border-zinc-300 text-sm focus:ring-2 focus:ring-zinc-900 focus:outline-none">
+                </div>
+
+                <div>
+                  <label class="text-xs font-bold uppercase tracking-wider text-zinc-700 block mb-1">Project Scope &amp; Notes *</label>
+                  <textarea id="form-notes" rows="3" required placeholder="Describe your timeline, font preferences, or CAT tool requirements..." class="w-full px-3.5 py-2.5 rounded-lg border border-zinc-300 text-sm focus:ring-2 focus:ring-zinc-900 focus:outline-none"></textarea>
+                </div>
+
+                <div class="flex items-center space-x-2 pt-1">
+                  <input type="checkbox" id="form-nda" class="w-4 h-4 rounded text-zinc-900">
+                  <label for="form-nda" class="text-xs text-zinc-600">Please send a mutual Non-Disclosure Agreement (NDA) prior to kickoff.</label>
+                </div>
+
+                <div class="pt-2">
+                  <button type="submit" class="w-full py-3.5 rounded-xl bg-zinc-900 text-white font-bold text-sm hover:bg-zinc-800 transition-colors shadow-xs">
+                    Submit Request for Quote
+                  </button>
+                  <p class="text-[11px] text-zinc-400 text-center mt-2">Guaranteed response within 2 hours during global business hours.</p>
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-zinc-200 text-zinc-600 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+        
+        <div class="lg:col-span-4 space-y-3">
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 rounded-lg bg-zinc-900 flex items-center justify-center text-white font-bold text-base">V</div>
+            <span class="text-xl font-bold tracking-tight text-zinc-900">VINBOX</span>
+          </div>
+          <p class="text-zinc-600 text-xs leading-relaxed max-w-sm">
+            Specialized Multilingual Desktop Publishing (DTP) &amp; typesetting agency based in Pune, India. Formatting in InDesign, FrameMaker, and Illustrator across 100+ languages for global agencies.
+          </p>
+          <p class="text-[11px] text-zinc-500">ISO 9001:2015 &amp; ISO 17100 Compliant Workflow</p>
+        </div>
+
+        <div class="lg:col-span-3 space-y-2">
+          <h4 class="font-bold text-zinc-900 uppercase tracking-wider text-xs">DTP Services</h4>
+          <ul class="space-y-1.5 text-zinc-600">
+            <li><a href="#services" class="hover:text-zinc-900">Multilingual InDesign Layout</a></li>
+            <li><a href="#services" class="hover:text-zinc-900">RTL Arabic/Hebrew Mirroring</a></li>
+            <li><a href="#services" class="hover:text-zinc-900">Technical FrameMaker Manuals</a></li>
+            <li><a href="#services" class="hover:text-zinc-900">Packaging Artwork Dielines</a></li>
+            <li><a href="#services" class="hover:text-zinc-900">E-Learning &amp; Digital Collateral</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2 space-y-2">
+          <h4 class="font-bold text-zinc-900 uppercase tracking-wider text-xs">Navigation</h4>
+          <ul class="space-y-1.5 text-zinc-600">
+            <li><a href="#about" class="hover:text-zinc-900">About Vinbox</a></li>
+            <li><a href="#scripts" class="hover:text-zinc-900">Scripts Matrix</a></li>
+            <li><a href="#portfolio" class="hover:text-zinc-900">Portfolio &amp; Work</a></li>
+            <li><a href="#process" class="hover:text-zinc-900">Production Process</a></li>
+            <li><a href="#estimator" class="hover:text-zinc-900">Scope Estimator</a></li>
+            <li><a href="#faq" class="hover:text-zinc-900">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 space-y-2">
+          <h4 class="font-bold text-zinc-900 uppercase tracking-wider text-xs">Pune Delivery Hub</h4>
+          <p class="text-zinc-600">Level 4, Synergy Commercial Hub, Baner High Street, Pune 411045, Maharashtra, India</p>
+          <p><a href="mailto:projects@vinbox.in" class="hover:text-zinc-900 font-medium">projects@vinbox.in</a></p>
+          <p><a href="tel:+912067890123" class="hover:text-zinc-900 font-medium">+91 20 6789 0123</a></p>
+        </div>
+
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-zinc-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-zinc-500">
+        <div>&copy; 2026 Vinbox DTP Services. All rights reserved. Registered in Pune, Maharashtra, India.</div>
+        <div class="flex space-x-4">
+          <a href="#about" class="hover:text-zinc-900">Privacy Policy</a>
+          <a href="#services" class="hover:text-zinc-900">Terms of Service</a>
+          <a href="#contact" class="hover:text-zinc-900">Non-Disclosure Agreement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- VANILLA JAVASCRIPT INTERACTIONS -->
+  <script>
+    // 1. Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+
+    if (mobileBtn) {
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          iconOpen.classList.add('hidden');
+          iconClose.classList.remove('hidden');
+        } else {
+          mobileMenu.classList.add('hidden');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+        }
+      });
+    }
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      });
+    });
+
+    // 2. Script Matrix Switcher Data & Function
+    const scriptData = {
+      indic: {
+        factor: '+15% to +25% expansion',
+        title: 'Indic & South Asian (Hindi, Marathi, Tamil, Bengali)',
+        languages: 'Devanagari (Hindi, Marathi), Tamil, Telugu, Bengali, Gujarati, Kannada, Malayalam',
+        rules: [
+          'Complex conjunct consonants (Matras) requiring Unicode OpenType engines',
+          'Vertical ascender/descender clearance to prevent text clipping',
+          'Strict prevention of improper syllable splitting at line breaks'
+        ],
+        font: 'Optimized with Noto Sans Devanagari, Mangal, Kohinoor, and custom licensed Indian typefaces.',
+        sampleEn: '"Precision Engineering for Global Industries"',
+        sampleLoc: 'वैश्विक उद्योगों के लिए सटीक अभियांत्रिकी (Devanagari / Hindi)'
+      },
+      rtl: {
+        factor: '-10% to +15% with layout mirroring',
+        title: 'Right-To-Left (Arabic, Hebrew, Urdu, Farsi)',
+        languages: 'Arabic (Standard & Gulf), Hebrew, Urdu, Persian / Farsi',
+        rules: [
+          'Full horizontal mirroring of columns, tables, headers, and bullet lists',
+          'Bidirectional handling preserving LTR brand names and serial numbers',
+          'Kashida justification and ligature spacing for formal Arabic'
+        ],
+        font: 'Rendered using InDesign ME World-Ready Composer with Frutiger LT Arabic, GE SS, and Dubai Font.',
+        sampleEn: '"Authorized Service Center and Warranty Guide"',
+        sampleLoc: 'مركز الخدمة المعتمد ودليل الضمان (Arabic Standard)'
+      },
+      cjk: {
+        factor: '-20% to -35% compression',
+        title: 'East Asian (Japanese, Simplified/Traditional Chinese, Korean)',
+        languages: 'Japanese (Kanji/Kana), Chinese Simplified, Chinese Traditional, Korean (Hangul)',
+        rules: [
+          'Kinsoku Shori rules to eliminate illegal line start/end punctuation marks',
+          'Tate-chū-yoko (horizontal in vertical) typesetting for numerical indices',
+          'Proper whitespace management without Latin word-spacing gaps'
+        ],
+        font: 'Crafted with Morisawa, Source Han Sans, Hiragino Kaku Gothic, and MS YaHei.',
+        sampleEn: '"High Performance Thermal Management Systems"',
+        sampleLoc: '高性能熱管理システム (Japanese) / 高性能热管理系统 (Simp. Chinese)'
+      },
+      european: {
+        factor: '+25% to +40% expansion in German & Slavic',
+        title: 'European & Cyrillic (German, French, Spanish, Russian)',
+        languages: 'German, French, Spanish, Italian, Russian (Cyrillic), Polish, Greek, Turkish',
+        rules: [
+          'Managing extreme compound words (e.g. German multi-syllable terms)',
+          'Language-specific hyphenation dictionaries and soft hyphen insertion',
+          'Preservation of French non-breaking spaces before colons and guillemets'
+        ],
+        font: 'Full Latin Extended and Cyrillic character set compliance using Helvetica Neue, DIN Pro, and Proxima Nova.',
+        sampleEn: '"Integrated Environmental Management Policy"',
+        sampleLoc: 'Integrierte Umweltmanagementrichtlinie (German, +35% length)'
+      },
+      se_asian: {
+        factor: '+10% to +30% with vertical tone stacking',
+        title: 'Southeast Asian (Thai, Vietnamese, Khmer, Burmese)',
+        languages: 'Thai, Vietnamese, Khmer (Cambodian), Burmese (Myanmar)',
+        rules: [
+          'Thai non-spaced continuous text requiring intelligent dictionary line-breaking',
+          'Multi-level tone marks (Mai Ek, Mai Tho) requiring extra leading/line height',
+          'Vietnamese complex double-diacritics (ấ, ề, ỗ, ự) without font fallback clipping'
+        ],
+        font: 'Executed using Cordia New, DB Helvethaica, Prompt, and Noto Sans Thai.',
+        sampleEn: '"Operating Instructions and Safety Precautions"',
+        sampleLoc: 'คู่มือการใช้งานและข้อควรระวังเพื่อความปลอดภัย (Thai)'
+      }
+    };
+
+    function selectScript(key) {
+      const data = scriptData[key];
+      if (!data) return;
+
+      document.querySelectorAll('.script-tab').forEach(tab => {
+        tab.classList.remove('border-indigo-600', 'text-zinc-900', 'bg-white', 'shadow-xs');
+        tab.classList.add('border-transparent', 'text-zinc-500');
+      });
+
+      const activeTab = document.getElementById('tab-' + key);
+      if (activeTab) {
+        activeTab.classList.add('border-indigo-600', 'text-zinc-900', 'bg-white', 'shadow-xs');
+        activeTab.classList.remove('border-transparent', 'text-zinc-500');
+      }
+
+      document.getElementById('script-factor').innerText = data.factor;
+      document.getElementById('script-title').innerText = data.title;
+      document.getElementById('script-languages').innerText = data.languages;
+      document.getElementById('script-font').innerText = data.font;
+      document.getElementById('script-sample-en').innerText = data.sampleEn;
+      document.getElementById('script-sample-loc').innerText = data.sampleLoc;
+
+      const rulesContainer = document.getElementById('script-rules');
+      rulesContainer.innerHTML = data.rules.map(r => `<li class="flex items-start"><span class="text-emerald-600 mr-2">&check;</span> ${r}</li>`).join('');
+    }
+
+    // 3. Portfolio Filtering
+    function filterPortfolio(category) {
+      document.querySelectorAll('.port-filter-btn').forEach(btn => {
+        btn.classList.remove('bg-zinc-900', 'text-white');
+        btn.classList.add('bg-zinc-100', 'text-zinc-600');
+      });
+
+      const activeBtn = document.getElementById('filter-' + category);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-zinc-900', 'text-white');
+        activeBtn.classList.remove('bg-zinc-100', 'text-zinc-600');
+      }
+
+      document.querySelectorAll('.port-card').forEach(card => {
+        if (category === 'all' || card.classList.contains('port-' + category)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // 4. FAQ Toggle
+    function toggleFaq(id) {
+      const body = document.getElementById('body-' + id);
+      const icon = document.getElementById('icon-' + id);
+      if (!body) return;
+
+      const isHidden = body.classList.contains('hidden');
+      if (isHidden) {
+        body.classList.remove('hidden');
+        if (icon) icon.innerHTML = '&minus;';
+      } else {
+        body.classList.add('hidden');
+        if (icon) icon.innerHTML = '&plus;';
+      }
+    }
+
+    // 5. Interactive Scope Estimator
+    let currentTurnaround = 'Standard (48-72h)';
+
+    function setTurnaround(val) {
+      currentTurnaround = val;
+      document.querySelectorAll('.turnaround-btn').forEach(btn => {
+        btn.classList.remove('border-indigo-600', 'bg-indigo-50', 'text-indigo-900');
+        btn.classList.add('border-zinc-200', 'bg-white', 'text-zinc-700');
+      });
+
+      if (val.includes('Standard')) {
+        document.getElementById('prio-std').classList.add('border-indigo-600', 'bg-indigo-50', 'text-indigo-900');
+      } else if (val.includes('Rush')) {
+        document.getElementById('prio-rush').classList.add('border-indigo-600', 'bg-indigo-50', 'text-indigo-900');
+      } else {
+        document.getElementById('prio-sprint').classList.add('border-indigo-600', 'bg-indigo-50', 'text-indigo-900');
+      }
+      recalculateEstimator();
+    }
+
+    function recalculateEstimator() {
+      const pages = parseInt(document.getElementById('calc-pages').value, 10);
+      const langs = parseInt(document.getElementById('calc-langs').value, 10);
+      
+      document.getElementById('calc-pages-display').innerText = pages + (pages === 1 ? ' Page' : ' Pages');
+      document.getElementById('calc-langs-display').innerText = langs + (langs === 1 ? ' Language' : ' Languages');
+
+      const totalPages = pages * langs;
+      document.getElementById('calc-total-volume').innerText = totalPages + ' Processed Pages';
+
+      let turnaround = '48 hours';
+      let team = '1 Dedicated DTP Specialist + 1 QA Inspector';
+
+      if (totalPages > 800) {
+        turnaround = currentTurnaround.includes('Rush') ? '4–5 business days (Scaled Pod)' : '7–9 business days';
+        team = '4 DTP Specialists + 1 Font Engineer + 2 QA Leads';
+      } else if (totalPages > 200) {
+        turnaround = currentTurnaround.includes('Rush') ? '2 business days' : '3–4 business days';
+        team = '2 DTP Specialists + 1 QA Inspector';
+      } else {
+        turnaround = currentTurnaround.includes('Rush') ? '24–36 hours' : '48 hours';
+        team = '1 Dedicated DTP Specialist + 1 QA Inspector';
+      }
+
+      document.getElementById('calc-turnaround-res').innerText = turnaround;
+      document.getElementById('calc-team-res').innerText = team;
+    }
+
+    function applyEstimateToQuote() {
+      const format = document.getElementById('calc-format').value;
+      const pages = document.getElementById('calc-pages').value;
+      const langs = document.getElementById('calc-langs').value;
+
+      document.getElementById('form-langs').value = langs + ' Target Languages (' + pages + ' source pages)';
+      document.getElementById('form-notes').value = 'Calculated Estimate:\n• Format: ' + format + '\n• Volume: ' + pages + ' pages across ' + langs + ' languages\n• Priority: ' + currentTurnaround;
+
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // 6. Quote Form Submit Handler
+    function handleQuoteSubmit(e) {
+      e.preventDefault();
+      document.getElementById('quote-form').classList.add('hidden');
+      document.getElementById('form-success').classList.remove('hidden');
+    }
+
+    function resetQuoteForm() {
+      document.getElementById('quote-form').reset();
+      document.getElementById('quote-form').classList.remove('hidden');
+      document.getElementById('form-success').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
