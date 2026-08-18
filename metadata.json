@@ -1,0 +1,6 @@
+{
+  "name": "Vinbox - Multilingual DTP & Localisation Services",
+  "description": "Professional desktop publishing and localized typesetting services based in Pune, India. Formatting in InDesign, Illustrator, and FrameMaker across 100+ languages for global agencies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
