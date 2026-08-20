@@ -20,7 +20,7 @@ export const PortfolioSection: React.FC = () => {
         {/* Header & Filter Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#0b5d6c]">
               Agency Case Studies
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mt-2">
@@ -40,7 +40,7 @@ export const PortfolioSection: React.FC = () => {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                   activeCategory === cat
-                    ? 'bg-zinc-900 text-white shadow-2xs'
+                    ? 'bg-[#0b5d6c] text-white shadow-2xs'
                     : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-zinc-900'
                 }`}
               >
@@ -55,7 +55,7 @@ export const PortfolioSection: React.FC = () => {
           {filteredItems.map((item) => (
             <div
               key={item.id}
-              className="rounded-2xl border border-zinc-200/90 overflow-hidden bg-[#FAFAF9] hover:border-zinc-300 hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+              className="rounded-2xl border border-zinc-200/90 overflow-hidden bg-[#FAFAF9] hover:border-[#0b5d6c]/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
             >
               {/* Image with Category overlay */}
               <div className="relative aspect-16/9 bg-zinc-200 overflow-hidden">
@@ -72,7 +72,7 @@ export const PortfolioSection: React.FC = () => {
                 </div>
                 <div className="absolute bottom-3 right-3">
                   <span className="px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-zinc-900/80 text-zinc-200 backdrop-blur-xs flex items-center">
-                    <Clock className="w-3 h-3 mr-1 text-emerald-400" />
+                    <Clock className="w-3 h-3 mr-1 text-[#09afa6]" />
                     {item.turnaround}
                   </span>
                 </div>
@@ -84,7 +84,7 @@ export const PortfolioSection: React.FC = () => {
                   <span className="text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
                     {item.clientType}
                   </span>
-                  <h3 className="text-xl font-bold text-zinc-900 tracking-tight group-hover:text-indigo-600 transition-colors">
+                  <h3 className="text-xl font-bold text-zinc-900 tracking-tight group-hover:text-[#0b5d6c] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-zinc-600 line-clamp-2 leading-relaxed">
@@ -110,10 +110,10 @@ export const PortfolioSection: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => setSelectedCase(item)}
-                      className="text-xs font-bold text-zinc-900 hover:text-indigo-600 inline-flex items-center group-hover:underline cursor-pointer"
+                      className="text-xs font-bold text-zinc-900 hover:text-[#0b5d6c] inline-flex items-center group-hover:underline cursor-pointer"
                     >
                       <span>View Full Case Study</span>
-                      <ArrowRight className="w-3.5 h-3.5 ml-1 text-zinc-400 group-hover:text-indigo-600 group-hover:translate-x-0.5 transition-transform" />
+                      <ArrowRight className="w-3.5 h-3.5 ml-1 text-zinc-400 group-hover:text-[#0b5d6c] group-hover:translate-x-0.5 transition-transform" />
                     </button>
                   </div>
                 </div>
@@ -124,6 +124,7 @@ export const PortfolioSection: React.FC = () => {
           ))}
         </div>
 
+        {/* Case Study Modal */}
       </div>
 
       {/* Case Study Deep-Dive Modal */}
@@ -148,7 +149,7 @@ export const PortfolioSection: React.FC = () => {
 
             {/* Modal Header */}
             <div className="mb-4">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-600">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#0b5d6c]">
                 {selectedCase.category} • {selectedCase.clientType}
               </span>
               <h3 className="text-xl sm:text-2xl font-bold text-zinc-900 mt-1">
@@ -159,12 +160,12 @@ export const PortfolioSection: React.FC = () => {
             {/* Quick Metrics Strip */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 p-3.5 rounded-xl bg-zinc-50 border border-zinc-200/80 mb-5 text-xs">
               <div>
-                <span className="text-zinc-400 block font-medium">Scope & Volume:</span>
+                <span className="text-zinc-400 block font-medium">Scope &amp; Volume:</span>
                 <span className="font-semibold text-zinc-800">{selectedCase.pageCount}</span>
               </div>
               <div>
                 <span className="text-zinc-400 block font-medium">Turnaround Time:</span>
-                <span className="font-semibold text-emerald-600">{selectedCase.turnaround}</span>
+                <span className="font-semibold text-[#09afa6]">{selectedCase.turnaround}</span>
               </div>
               <div className="col-span-2 sm:col-span-1">
                 <span className="text-zinc-400 block font-medium">Tool Suite:</span>
@@ -187,19 +188,19 @@ export const PortfolioSection: React.FC = () => {
                 <h4 className="font-bold text-zinc-900 text-xs uppercase tracking-wider mb-1">
                   Vinbox Engineering Solution
                 </h4>
-                <p className="leading-relaxed bg-indigo-50/40 p-3 rounded-lg border border-indigo-100 text-zinc-700 text-xs">
+                <p className="leading-relaxed bg-[#e8f4f6]/60 p-3 rounded-lg border border-[#0b5d6c]/20 text-zinc-700 text-xs">
                   {selectedCase.solution}
                 </p>
               </div>
 
               <div>
                 <h4 className="font-bold text-zinc-900 text-xs uppercase tracking-wider mb-2">
-                  Key Outcomes & Client Metrics
+                  Key Outcomes &amp; Client Metrics
                 </h4>
                 <div className="space-y-1.5">
                   {selectedCase.results.map((res, i) => (
                     <div key={i} className="flex items-start space-x-2 text-xs text-zinc-700">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#09afa6] shrink-0 mt-0.5" />
                       <span>{res}</span>
                     </div>
                   ))}
@@ -215,7 +216,7 @@ export const PortfolioSection: React.FC = () => {
               <a
                 href="#contact"
                 onClick={() => setSelectedCase(null)}
-                className="px-4 py-2 text-xs font-semibold rounded-lg bg-zinc-900 text-white hover:bg-zinc-800 transition-colors"
+                className="px-4 py-2 text-xs font-semibold rounded-lg bg-[#0b5d6c] text-white hover:bg-[#084955] transition-colors shadow-xs"
               >
                 Discuss Similar Project
               </a>

@@ -35,40 +35,40 @@ export const Navbar: React.FC<NavbarProps> = () => {
   return (
     <>
       {/* Top micro bar for global agencies */}
-      <div className="bg-zinc-950 text-zinc-300 text-xs py-1.5 px-4 border-b border-zinc-800/80 hidden md:block">
+      <div className="bg-[#063740] text-zinc-200 text-xs py-1.5 px-4 border-b border-[#0b5d6c]/30 hidden md:block">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-6">
-            <span className="flex items-center space-x-1.5 text-zinc-400">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span className="text-zinc-200 font-medium">Pune Delivery Hub:</span>
+            <span className="flex items-center space-x-1.5 text-zinc-300">
+              <span className="w-2 h-2 rounded-full bg-[#09afa6] animate-pulse"></span>
+              <span className="text-white font-medium">Pune Delivery Hub:</span>
               <span>Accepting Global Agency Projects</span>
             </span>
-            <span className="text-zinc-500">|</span>
-            <span className="flex items-center space-x-1.5 text-zinc-400">
-              <Clock className="w-3.5 h-3.5 text-zinc-400" />
+            <span className="text-teal-700/60">|</span>
+            <span className="flex items-center space-x-1.5 text-zinc-300">
+              <Clock className="w-3.5 h-3.5 text-[#09afa6]" />
               <span>Response Time: &lt; 2 Hours</span>
             </span>
           </div>
           <div className="flex items-center space-x-6">
             <a
               href={`mailto:${COMPANY_INFO.email}`}
-              className="flex items-center space-x-1.5 hover:text-white transition-colors"
+              className="flex items-center space-x-1.5 hover:text-[#09afa6] transition-colors"
             >
-              <Mail className="w-3.5 h-3.5 text-zinc-400" />
+              <Mail className="w-3.5 h-3.5 text-[#09afa6]" />
               <span>{COMPANY_INFO.email}</span>
             </a>
-            <span className="text-zinc-600">|</span>
+            <span className="text-teal-700/60">|</span>
             <a
               href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
-              className="flex items-center space-x-1.5 hover:text-white transition-colors"
+              className="flex items-center space-x-1.5 hover:text-[#09afa6] transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-zinc-400" />
+              <Phone className="w-3.5 h-3.5 text-[#09afa6]" />
               <span>{COMPANY_INFO.phone}</span>
             </a>
-            <span className="text-zinc-600">|</span>
-            <span className="flex items-center space-x-1 text-zinc-400">
-              <Globe className="w-3.5 h-3.5 text-indigo-400" />
-              <span className="text-zinc-300">100+ Languages</span>
+            <span className="text-teal-700/60">|</span>
+            <span className="flex items-center space-x-1 text-zinc-300">
+              <Globe className="w-3.5 h-3.5 text-[#09afa6]" />
+              <span className="text-white font-medium">100+ Languages</span>
             </span>
           </div>
         </div>
@@ -85,18 +85,12 @@ export const Navbar: React.FC<NavbarProps> = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="#" className="flex items-center space-x-3 group">
-              <div className="w-9 h-9 rounded-lg bg-zinc-900 flex items-center justify-center text-white font-bold tracking-tight text-lg shadow-xs group-hover:bg-indigo-600 transition-colors">
-                V
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold tracking-tight text-zinc-900 leading-none">
-                  VINBOX
-                </span>
-                <span className="text-[10px] tracking-widest uppercase font-semibold text-zinc-500 mt-0.5">
-                  DTP & Localisation
-                </span>
-              </div>
+            <a href="#" className="flex items-center group">
+              <img
+                src="/assets/vinbox_logo.png"
+                alt="Vinbox DTP & Localisation"
+                className="h-9 sm:h-10 w-auto object-contain"
+              />
             </a>
 
             {/* Desktop Navigation Links */}
@@ -105,10 +99,10 @@ export const Navbar: React.FC<NavbarProps> = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-sm font-medium text-zinc-600 hover:text-zinc-900 transition-colors py-1 relative group"
+                  className="text-sm font-medium text-zinc-600 hover:text-[#0b5d6c] transition-colors py-1 relative group"
                 >
                   {link.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-zinc-900 group-hover:w-full transition-all duration-200 ease-out"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0b5d6c] group-hover:w-full transition-all duration-200 ease-out"></span>
                 </a>
               ))}
             </nav>
@@ -117,10 +111,10 @@ export const Navbar: React.FC<NavbarProps> = () => {
             <div className="hidden sm:flex items-center space-x-4">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg bg-zinc-900 text-white hover:bg-zinc-800 transition-colors shadow-xs group"
+                className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg bg-[#0b5d6c] text-white hover:bg-[#084955] transition-colors shadow-xs group"
               >
                 <span>Request a Quote</span>
-                <ArrowRight className="w-4 h-4 ml-1.5 text-zinc-400 group-hover:translate-x-0.5 transition-transform" />
+                <ArrowRight className="w-4 h-4 ml-1.5 text-[#09afa6] group-hover:translate-x-0.5 transition-transform" />
               </a>
             </div>
 
@@ -129,7 +123,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 rounded-lg text-zinc-700 hover:text-zinc-900 hover:bg-zinc-100 transition-colors focus:outline-hidden"
+                className="p-2 rounded-lg text-zinc-700 hover:text-[#0b5d6c] hover:bg-[#e8f4f6] transition-colors focus:outline-hidden"
                 aria-label="Toggle navigation menu"
               >
                 {isMobileMenuOpen ? (
@@ -151,7 +145,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-zinc-700 hover:text-zinc-900 hover:bg-zinc-50"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-zinc-700 hover:text-[#0b5d6c] hover:bg-[#e8f4f6]"
                 >
                   {link.name}
                 </a>
@@ -161,10 +155,10 @@ export const Navbar: React.FC<NavbarProps> = () => {
               <a
                 href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold rounded-lg bg-zinc-900 text-white hover:bg-zinc-800 transition-colors text-center"
+                className="w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold rounded-lg bg-[#0b5d6c] text-white hover:bg-[#084955] transition-colors text-center"
               >
                 <span>Request a Project Quote</span>
-                <ArrowRight className="w-4 h-4 ml-1.5" />
+                <ArrowRight className="w-4 h-4 ml-1.5 text-[#09afa6]" />
               </a>
               <div className="flex items-center justify-center space-x-4 pt-2 text-xs text-zinc-500">
                 <span>Pune, India Hub</span>

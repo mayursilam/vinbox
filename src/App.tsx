@@ -35,7 +35,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAFAF9] text-zinc-900 font-sans selection:bg-indigo-100 selection:text-indigo-900">
+    <div className="min-h-screen flex flex-col bg-[#FAFAF9] text-zinc-900 font-sans selection:bg-[#09afa6]/20 selection:text-[#0b5d6c]">
       {/* Navigation Header */}
       <Navbar />
 

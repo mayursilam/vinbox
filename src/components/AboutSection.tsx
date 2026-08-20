@@ -13,7 +13,7 @@ export const AboutSection: React.FC = () => {
           <div className="lg:col-span-7 space-y-6">
             
             <div className="space-y-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#0b5d6c]">
                 About Vinbox • Pune, India
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 leading-tight">
@@ -36,7 +36,7 @@ export const AboutSection: React.FC = () => {
             {/* Key Differentiators */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
               <div className="flex items-start space-x-3 p-3 rounded-lg bg-white border border-zinc-200/80 shadow-2xs">
-                <div className="p-1 rounded-md bg-indigo-50 text-indigo-600 mt-0.5">
+                <div className="p-1 rounded-md bg-[#e8f4f6] text-[#0b5d6c] mt-0.5">
                   <Check className="w-4 h-4" />
                 </div>
                 <div>
@@ -46,7 +46,7 @@ export const AboutSection: React.FC = () => {
               </div>
 
               <div className="flex items-start space-x-3 p-3 rounded-lg bg-white border border-zinc-200/80 shadow-2xs">
-                <div className="p-1 rounded-md bg-indigo-50 text-indigo-600 mt-0.5">
+                <div className="p-1 rounded-md bg-[#e8f4f6] text-[#0b5d6c] mt-0.5">
                   <Zap className="w-4 h-4" />
                 </div>
                 <div>
@@ -60,15 +60,15 @@ export const AboutSection: React.FC = () => {
             <div className="pt-2 flex items-center space-x-4">
               <a
                 href="#services"
-                className="inline-flex items-center text-sm font-semibold text-zinc-900 hover:text-indigo-600 transition-colors group"
+                className="inline-flex items-center text-sm font-semibold text-[#0b5d6c] hover:text-[#084955] transition-colors group"
               >
                 <span>Explore all DTP capabilities</span>
-                <ArrowRight className="w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 ml-1.5 text-[#09afa6] group-hover:translate-x-1 transition-transform" />
               </a>
               <span className="text-zinc-300">•</span>
               <a
                 href="#contact"
-                className="text-sm font-medium text-zinc-600 hover:text-zinc-900 underline underline-offset-4"
+                className="text-sm font-medium text-zinc-600 hover:text-[#0b5d6c] underline underline-offset-4"
               >
                 Schedule an introductory call
               </a>
@@ -90,10 +90,10 @@ export const AboutSection: React.FC = () => {
               <div className="p-6 bg-white space-y-4">
                 <div className="flex items-center justify-between pb-3 border-b border-zinc-100">
                   <div className="flex items-center space-x-2 text-zinc-800 font-semibold text-sm">
-                    <Building2 className="w-4 h-4 text-indigo-600" />
+                    <Building2 className="w-4 h-4 text-[#0b5d6c]" />
                     <span>Vinbox Production Studio</span>
                   </div>
-                  <span className="text-xs font-mono px-2 py-0.5 rounded bg-zinc-100 text-zinc-600 border border-zinc-200">
+                  <span className="text-xs font-mono px-2 py-0.5 rounded bg-[#e8f4f6] text-[#0b5d6c] border border-[#0b5d6c]/20 font-semibold">
                     Pune Hub
                   </span>
                 </div>
@@ -104,14 +104,14 @@ export const AboutSection: React.FC = () => {
                     <span>{COMPANY_INFO.fullAddress}</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Sparkles className="w-4 h-4 text-zinc-400 shrink-0" />
-                    <span>Full-time in-house operators & font engineers (Strict NDA enforcement)</span>
+                    <Sparkles className="w-4 h-4 text-[#09afa6] shrink-0" />
+                    <span>Full-time in-house operators &amp; font engineers (Strict NDA enforcement)</span>
                   </div>
                 </div>
 
                 <div className="pt-3 border-t border-zinc-100 flex items-center justify-between text-xs">
                   <span className="text-zinc-500">First-pass pre-press accuracy</span>
-                  <span className="font-bold text-emerald-600">{COMPANY_INFO.satisfactionRate}</span>
+                  <span className="font-bold text-[#09afa6]">{COMPANY_INFO.satisfactionRate}</span>
                 </div>
               </div>
 

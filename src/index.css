@@ -1,6 +1,17 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    --vinbox-primary: #0b5d6c;
+    --vinbox-primary-hover: #084955;
+    --vinbox-primary-dark: #063740;
+    --vinbox-primary-light: #e8f4f6;
+    --vinbox-accent: #09afa6;
+    --vinbox-accent-hover: #07968e;
+    --vinbox-accent-light: #e6f9f8;
+    --vinbox-accent-dark: #077d76;
+  }
+
   html {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color-scheme: light;
@@ -16,10 +27,11 @@
   background: #f4f4f5;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d4d4d8;
+  background: #c6dadf;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a1a1aa;
+  background: #0b5d6c;
 }
+
 

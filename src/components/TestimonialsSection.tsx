@@ -9,7 +9,7 @@ export const TestimonialsSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12 sm:mb-16">
-          <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#0b5d6c]">
             Client Endorsements
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mt-2">
@@ -25,7 +25,7 @@ export const TestimonialsSection: React.FC = () => {
           {TESTIMONIALS_DATA.map((t) => (
             <div
               key={t.id}
-              className="p-6 sm:p-8 rounded-2xl bg-white border border-zinc-200/90 shadow-2xs hover:border-zinc-300 hover:shadow-xs transition-all flex flex-col justify-between"
+              className="p-6 sm:p-8 rounded-2xl bg-white border border-zinc-200/90 shadow-2xs hover:border-[#0b5d6c]/40 hover:shadow-xs transition-all flex flex-col justify-between"
             >
               <div className="space-y-4">
                 {/* Rating stars */}
@@ -56,7 +56,7 @@ export const TestimonialsSection: React.FC = () => {
                   <p className="text-xs text-zinc-500 truncate">
                     {t.role}
                   </p>
-                  <p className="text-[11px] text-indigo-600 font-medium truncate">
+                  <p className="text-[11px] text-[#0b5d6c] font-medium truncate">
                     {t.company} • {t.location}
                   </p>
                 </div>

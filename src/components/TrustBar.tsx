@@ -4,10 +4,10 @@ import { TRUST_STATS, TOOL_COMPATIBILITY_BADGES } from '../data/siteData';
 
 export const TrustBar: React.FC = () => {
   const statIcons = [
-    <Award className="w-5 h-5 text-zinc-700" key="exp" />,
-    <Globe2 className="w-5 h-5 text-zinc-700" key="lang" />,
-    <BookOpenCheck className="w-5 h-5 text-zinc-700" key="projects" />,
-    <ThumbsUp className="w-5 h-5 text-zinc-700" key="sat" />
+    <Award className="w-5 h-5 text-[#0b5d6c]" key="exp" />,
+    <Globe2 className="w-5 h-5 text-[#0b5d6c]" key="lang" />,
+    <BookOpenCheck className="w-5 h-5 text-[#0b5d6c]" key="projects" />,
+    <ThumbsUp className="w-5 h-5 text-[#0b5d6c]" key="sat" />
   ];
 
   return (
@@ -19,10 +19,10 @@ export const TrustBar: React.FC = () => {
           {TRUST_STATS.map((stat, idx) => (
             <div
               key={stat.label}
-              className="flex flex-col space-y-1 p-3 rounded-lg hover:bg-zinc-50/70 transition-colors"
+              className="flex flex-col space-y-1 p-3 rounded-lg hover:bg-[#e8f4f6]/30 transition-colors"
             >
               <div className="flex items-center space-x-2.5 mb-1">
-                <div className="p-1.5 rounded-md bg-zinc-100 border border-zinc-200/60">
+                <div className="p-1.5 rounded-md bg-[#e8f4f6] border border-[#0b5d6c]/20">
                   {statIcons[idx]}
                 </div>
                 <span className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 font-sans">

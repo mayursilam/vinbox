@@ -9,7 +9,7 @@ export const ProcessSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-3xl mb-14">
-          <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#0b5d6c]">
             Precision Workflow
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mt-2">
@@ -25,19 +25,19 @@ export const ProcessSection: React.FC = () => {
           {PROCESS_STEPS.map((step, idx) => (
             <div
               key={step.number}
-              className="p-6 sm:p-7 rounded-2xl bg-white border border-zinc-200/90 shadow-2xs hover:border-zinc-300 hover:shadow-xs transition-all relative flex flex-col justify-between"
+              className="p-6 sm:p-7 rounded-2xl bg-white border border-zinc-200/90 shadow-2xs hover:border-[#0b5d6c]/40 hover:shadow-xs transition-all relative flex flex-col justify-between group"
             >
               <div>
                 {/* Step Number */}
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl sm:text-3xl font-bold font-mono text-zinc-300 group-hover:text-zinc-900 transition-colors">
+                  <span className="text-2xl sm:text-3xl font-bold font-mono text-zinc-300 group-hover:text-[#0b5d6c] transition-colors">
                     {step.number}
                   </span>
-                  <span className="w-2 h-2 rounded-full bg-indigo-600"></span>
+                  <span className="w-2 h-2 rounded-full bg-[#09afa6]"></span>
                 </div>
 
                 {/* Step Title */}
-                <h3 className="text-base font-bold text-zinc-900 tracking-tight mb-2">
+                <h3 className="text-base font-bold text-zinc-900 tracking-tight mb-2 group-hover:text-[#0b5d6c] transition-colors">
                   {step.title}
                 </h3>
 
@@ -58,17 +58,17 @@ export const ProcessSection: React.FC = () => {
         {/* Assurance Box */}
         <div className="mt-12 p-5 rounded-xl bg-white border border-zinc-200/80 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center space-x-3 text-xs text-zinc-700">
-            <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
+            <ShieldCheck className="w-5 h-5 text-[#09afa6] shrink-0" />
             <span>
               <strong>Dual-Pass Quality Gate:</strong> Technical preflight + side-by-side linguistic overlay before any file is marked complete.
             </span>
           </div>
           <a
             href="#contact"
-            className="text-xs font-semibold text-zinc-900 hover:text-indigo-600 shrink-0 inline-flex items-center"
+            className="text-xs font-semibold text-[#0b5d6c] hover:text-[#084955] shrink-0 inline-flex items-center"
           >
             <span>Request QA sample checklist</span>
-            <ArrowRight className="w-3.5 h-3.5 ml-1" />
+            <ArrowRight className="w-3.5 h-3.5 ml-1 text-[#09afa6]" />
           </a>
         </div>
 

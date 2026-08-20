@@ -130,7 +130,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12 sm:mb-16">
-          <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#0b5d6c]">
             Request a Project Quote &amp; Consultation
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mt-2">
@@ -149,7 +149,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
             <div className="bg-white border border-zinc-200/90 rounded-2xl p-6 sm:p-7 shadow-xs space-y-6">
               <h3 className="text-lg font-bold text-zinc-900 tracking-tight pb-3 border-b border-zinc-100 flex items-center justify-between">
                 <span>Vinbox Production Hub</span>
-                <span className="text-[11px] font-mono font-semibold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">
+                <span className="text-[11px] font-mono font-semibold px-2 py-0.5 rounded bg-[#e6f9f8] text-[#09afa6] border border-[#09afa6]/30">
                   Online (IST)
                 </span>
               </h3>
@@ -157,7 +157,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
               <div className="space-y-4 text-sm text-zinc-600">
                 {/* Office Address */}
                 <div className="flex items-start space-x-3">
-                  <div className="p-2 rounded-lg bg-zinc-100 text-zinc-700 shrink-0 mt-0.5">
+                  <div className="p-2 rounded-lg bg-[#e8f4f6] text-[#0b5d6c] shrink-0 mt-0.5">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
@@ -167,7 +167,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                     <p className="text-xs text-zinc-600 mt-1 leading-relaxed">
                       {COMPANY_INFO.fullAddress}
                     </p>
-                    <span className="text-[11px] text-indigo-600 font-medium mt-1 block">
+                    <span className="text-[11px] text-[#0b5d6c] font-medium mt-1 block">
                       Pune, Maharashtra, India (Hinjawadi / Baner IT Corridor)
                     </span>
                   </div>
@@ -175,7 +175,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
 
                 {/* Email Contacts */}
                 <div className="flex items-start space-x-3 pt-3 border-t border-zinc-100">
-                  <div className="p-2 rounded-lg bg-zinc-100 text-zinc-700 shrink-0 mt-0.5">
+                  <div className="p-2 rounded-lg bg-[#e8f4f6] text-[#0b5d6c] shrink-0 mt-0.5">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div className="space-y-1">
@@ -185,13 +185,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                     <div>
                       <a
                         href={`mailto:${COMPANY_INFO.email}`}
-                        className="text-xs font-semibold text-zinc-900 hover:text-indigo-600 transition-colors block"
+                        className="text-xs font-semibold text-zinc-900 hover:text-[#0b5d6c] transition-colors block"
                       >
                         {COMPANY_INFO.email} <span className="text-zinc-400 font-normal">(RFQs &amp; Production)</span>
                       </a>
                       <a
                         href={`mailto:${COMPANY_INFO.inquiryEmail}`}
-                        className="text-xs text-zinc-600 hover:text-indigo-600 transition-colors block mt-0.5"
+                        className="text-xs text-zinc-600 hover:text-[#0b5d6c] transition-colors block mt-0.5"
                       >
                         {COMPANY_INFO.inquiryEmail} <span className="text-zinc-400 font-normal">(General &amp; Partnerships)</span>
                       </a>
@@ -201,7 +201,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
 
                 {/* Telephone / WhatsApp */}
                 <div className="flex items-start space-x-3 pt-3 border-t border-zinc-100">
-                  <div className="p-2 rounded-lg bg-zinc-100 text-zinc-700 shrink-0 mt-0.5">
+                  <div className="p-2 rounded-lg bg-[#e8f4f6] text-[#0b5d6c] shrink-0 mt-0.5">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div className="space-y-1">
@@ -212,14 +212,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                       Phone: <a href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`} className="font-semibold hover:underline">{COMPANY_INFO.phone}</a>
                     </p>
                     <p className="text-xs text-zinc-800 font-mono">
-                      WhatsApp: <a href={`https://wa.me/${COMPANY_INFO.whatsapp.replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" className="font-semibold text-emerald-700 hover:underline">{COMPANY_INFO.whatsapp}</a>
+                      WhatsApp: <a href={`https://wa.me/${COMPANY_INFO.whatsapp.replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#09afa6] hover:underline">{COMPANY_INFO.whatsapp}</a>
                     </p>
                   </div>
                 </div>
 
                 {/* Business Hours */}
                 <div className="flex items-start space-x-3 pt-3 border-t border-zinc-100">
-                  <div className="p-2 rounded-lg bg-zinc-100 text-zinc-700 shrink-0 mt-0.5">
+                  <div className="p-2 rounded-lg bg-[#e8f4f6] text-[#0b5d6c] shrink-0 mt-0.5">
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
@@ -235,7 +235,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
 
               {/* NDA & Security badge */}
               <div className="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200/80 text-xs text-zinc-600 flex items-center space-x-2.5">
-                <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-[#09afa6] shrink-0" />
                 <span>
                   All project files and client source assets are protected under strict NDA and ISO 27001-aligned data security protocols.
                 </span>
@@ -260,12 +260,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
               {isSubmitted ? (
                 /* Success State */
                 <div className="py-8 text-center space-y-5 animate-in fade-in zoom-in-95 duration-300">
-                  <div className="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto shadow-xs">
+                  <div className="w-14 h-14 bg-[#e6f9f8] text-[#09afa6] rounded-full flex items-center justify-center mx-auto shadow-xs">
                     <CheckCircle className="w-8 h-8" />
                   </div>
 
                   <div className="space-y-2">
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0b5d6c] bg-[#e8f4f6] px-3 py-1 rounded-full border border-[#0b5d6c]/20">
                       Project RFQ Reference: {quoteRefId}
                     </span>
                     <h3 className="text-2xl font-bold text-zinc-900">
@@ -291,7 +291,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                     </div>
                     <div className="flex justify-between border-t border-zinc-200/60 pt-1.5">
                       <span className="text-zinc-500">Guaranteed Response By:</span>
-                      <span className="font-bold text-indigo-600">Within 2 Hours (Business Day)</span>
+                      <span className="font-bold text-[#0b5d6c]">Within 2 Hours (Business Day)</span>
                     </div>
                   </div>
 
@@ -299,7 +299,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                     <button
                       type="button"
                       onClick={handleReset}
-                      className="px-5 py-2.5 rounded-lg bg-zinc-900 text-white text-xs font-semibold hover:bg-zinc-800 transition-colors cursor-pointer"
+                      className="px-5 py-2.5 rounded-lg bg-[#0b5d6c] text-white text-xs font-semibold hover:bg-[#084955] transition-colors cursor-pointer shadow-xs"
                     >
                       Submit Another Project Request
                     </button>
@@ -329,7 +329,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. Sarah Jenkins"
-                        className={`w-full px-3.5 py-2.5 rounded-lg bg-white border text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-hidden focus:ring-2 focus:ring-zinc-900 focus:border-transparent ${
+                        className={`w-full px-3.5 py-2.5 rounded-lg bg-white border text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-hidden focus:ring-2 focus:ring-[#0b5d6c] focus:border-transparent ${
                           errors.name ? 'border-red-500 bg-red-50/20' : 'border-zinc-300'
                         }`}
                       />
@@ -350,7 +350,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="name@agency.com"
-                        className={`w-full px-3.5 py-2.5 rounded-lg bg-white border text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-hidden focus:ring-2 focus:ring-zinc-900 focus:border-transparent ${
+                        className={`w-full px-3.5 py-2.5 rounded-lg bg-white border text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-hidden focus:ring-2 focus:ring-[#0b5d6c] focus:border-transparent ${
                           errors.email ? 'border-red-500 bg-red-50/20' : 'border-zinc-300'
                         }`}
                       />
@@ -374,7 +374,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         placeholder="e.g. Global Marketing Agency"
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-zinc-300 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-hidden focus:ring-2 focus:ring-zinc-900 focus:border-transparent"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-zinc-300 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-hidden focus:ring-2 focus:ring-[#0b5d6c] focus:border-transparent"
                       />
                     </div>
 
@@ -387,7 +387,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+1 (555) 000-0000"
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-zinc-300 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-hidden focus:ring-2 focus:ring-zinc-900 focus:border-transparent"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-zinc-300 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-hidden focus:ring-2 focus:ring-[#0b5d6c] focus:border-transparent"
                       />
                     </div>
                   </div>
@@ -401,7 +401,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                       <select
                         value={formData.serviceType}
                         onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-zinc-300 text-sm text-zinc-900 focus:outline-hidden focus:ring-2 focus:ring-zinc-900 focus:border-transparent"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-zinc-300 text-sm text-zinc-900 focus:outline-hidden focus:ring-2 focus:ring-[#0b5d6c] focus:border-transparent"
                       >
                         <option value="Multilingual Layout & Typesetting (InDesign)">Multilingual Layout &amp; Typesetting (InDesign)</option>
                         <option value="RTL & Bidirectional Formatting (Arabic / Hebrew)">RTL &amp; Bidirectional Formatting (Arabic / Hebrew)</option>
@@ -419,7 +419,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                       <select
                         value={formData.sourceFormat}
                         onChange={(e) => setFormData({ ...formData, sourceFormat: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-zinc-300 text-sm text-zinc-900 focus:outline-hidden focus:ring-2 focus:ring-zinc-900 focus:border-transparent"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-zinc-300 text-sm text-zinc-900 focus:outline-hidden focus:ring-2 focus:ring-[#0b5d6c] focus:border-transparent"
                       >
                         <option value="Adobe InDesign (.indd / .idml)">Adobe InDesign (.indd / .idml)</option>
                         <option value="Adobe FrameMaker (.fm / .book)">Adobe FrameMaker (.fm / .book)</option>
@@ -445,7 +445,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                         value={formData.languages}
                         onChange={(e) => setFormData({ ...formData, languages: e.target.value })}
                         placeholder="e.g. German, French, Arabic, Japanese, Hindi"
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-zinc-300 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-hidden focus:ring-2 focus:ring-zinc-900 focus:border-transparent"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-zinc-300 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-hidden focus:ring-2 focus:ring-[#0b5d6c] focus:border-transparent"
                       />
                     </div>
 
@@ -458,7 +458,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                         value={formData.pageCount}
                         onChange={(e) => setFormData({ ...formData, pageCount: e.target.value })}
                         placeholder="e.g. 48 pages per language"
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-zinc-300 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-hidden focus:ring-2 focus:ring-zinc-900 focus:border-transparent"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-zinc-300 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-hidden focus:ring-2 focus:ring-[#0b5d6c] focus:border-transparent"
                       />
                     </div>
                   </div>
@@ -473,7 +473,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Please mention any special font guidelines, CAT tool handoffs (Trados/memoQ), turnaround constraints, or pre-press requirements..."
-                      className={`w-full px-3.5 py-2.5 rounded-lg bg-white border text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-hidden focus:ring-2 focus:ring-zinc-900 focus:border-transparent ${
+                      className={`w-full px-3.5 py-2.5 rounded-lg bg-white border text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-hidden focus:ring-2 focus:ring-[#0b5d6c] focus:border-transparent ${
                         errors.message ? 'border-red-500 bg-red-50/20' : 'border-zinc-300'
                       }`}
                     />
@@ -490,9 +490,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                     <label className="text-xs font-bold uppercase tracking-wider text-zinc-700 block">
                       Attach Sample Source File / Specification PDF (Optional)
                     </label>
-                    <label className="border-2 border-dashed border-zinc-300 hover:border-zinc-400 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 cursor-pointer bg-zinc-50 hover:bg-zinc-100/70 transition-colors">
+                    <label className="border-2 border-dashed border-zinc-300 hover:border-[#0b5d6c] rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 cursor-pointer bg-zinc-50 hover:bg-[#e8f4f6]/40 transition-colors">
                       <div className="flex items-center space-x-3">
-                        <div className="p-2 rounded-lg bg-white border border-zinc-200 text-indigo-600">
+                        <div className="p-2 rounded-lg bg-white border border-zinc-200 text-[#0b5d6c]">
                           <UploadCloud className="w-5 h-5" />
                         </div>
                         <div>
@@ -504,7 +504,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                           </span>
                         </div>
                       </div>
-                      <span className="text-xs font-bold text-zinc-700 bg-white px-3 py-1.5 rounded-lg border border-zinc-200 shadow-2xs">
+                      <span className="text-xs font-bold text-[#0b5d6c] bg-white px-3 py-1.5 rounded-lg border border-zinc-200 shadow-2xs">
                         Browse File
                       </span>
                       <input
@@ -523,7 +523,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                       id="nda"
                       checked={formData.ndaRequested}
                       onChange={(e) => setFormData({ ...formData, ndaRequested: e.target.checked })}
-                      className="w-4 h-4 rounded text-zinc-900 focus:ring-zinc-900 border-zinc-300"
+                      className="w-4 h-4 rounded text-[#0b5d6c] focus:ring-[#0b5d6c] border-zinc-300"
                     />
                     <label htmlFor="nda" className="text-xs text-zinc-600 cursor-pointer">
                       Please send an executed Non-Disclosure Agreement (NDA) prior to project kick-off.
@@ -535,7 +535,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialData }) =
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-zinc-900 text-white font-bold text-sm hover:bg-zinc-800 transition-all shadow-xs disabled:opacity-70 cursor-pointer"
+                      className="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#0b5d6c] text-white font-bold text-sm hover:bg-[#084955] transition-all shadow-xs disabled:opacity-70 cursor-pointer"
                     >
                       {isSubmitting ? (
                         <span className="flex items-center space-x-2">

@@ -13,7 +13,7 @@ export const ScriptMatrixSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#0b5d6c]">
             DTP Linguistic Intelligence
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mt-2">
@@ -33,7 +33,7 @@ export const ScriptMatrixSection: React.FC = () => {
               onClick={() => setActiveScriptId(item.id)}
               className={`px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-t-lg transition-all whitespace-nowrap cursor-pointer border-b-2 ${
                 activeScriptId === item.id
-                  ? 'border-indigo-600 text-zinc-900 bg-white shadow-2xs'
+                  ? 'border-[#0b5d6c] text-[#0b5d6c] bg-white shadow-2xs'
                   : 'border-transparent text-zinc-500 hover:text-zinc-800 hover:bg-zinc-100/60'
               }`}
             >
@@ -49,7 +49,7 @@ export const ScriptMatrixSection: React.FC = () => {
             {/* Left: Rules & Technical Handling */}
             <div className="lg:col-span-6 space-y-6">
               <div>
-                <div className="inline-flex items-center space-x-2 text-xs font-semibold px-2.5 py-1 rounded bg-indigo-50 text-indigo-700 mb-2">
+                <div className="inline-flex items-center space-x-2 text-xs font-semibold px-2.5 py-1 rounded bg-[#e8f4f6] text-[#0b5d6c] border border-[#0b5d6c]/20 mb-2">
                   <Globe className="w-3.5 h-3.5" />
                   <span>{activeFamily.expansionFactor}</span>
                 </div>
@@ -83,7 +83,7 @@ export const ScriptMatrixSection: React.FC = () => {
                 <div className="space-y-2">
                   {activeFamily.specialHandling.map((rule, idx) => (
                     <div key={idx} className="flex items-start space-x-2.5 text-xs text-zinc-700">
-                      <div className="p-0.5 rounded bg-emerald-50 text-emerald-600 mt-0.5 shrink-0">
+                      <div className="p-0.5 rounded bg-[#e6f9f8] text-[#09afa6] mt-0.5 shrink-0">
                         <Check className="w-3.5 h-3.5" />
                       </div>
                       <span className="leading-relaxed">{rule}</span>
@@ -93,8 +93,8 @@ export const ScriptMatrixSection: React.FC = () => {
               </div>
 
               {/* Font Notes */}
-              <div className="p-3.5 rounded-lg bg-zinc-50 border border-zinc-200/70 text-xs text-zinc-600 flex items-start space-x-2.5">
-                <Type className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" />
+              <div className="p-3.5 rounded-lg bg-[#e8f4f6]/50 border border-[#0b5d6c]/20 text-xs text-zinc-600 flex items-start space-x-2.5">
+                <Type className="w-4 h-4 text-[#0b5d6c] shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-zinc-800">Typographical Font Compliance: </span>
                   <span>{activeFamily.fontNotes}</span>
@@ -111,7 +111,7 @@ export const ScriptMatrixSection: React.FC = () => {
                   <span className="font-semibold uppercase tracking-wider text-zinc-500">
                     Typesetting Preview
                   </span>
-                  <span className="text-indigo-600 font-mono text-[11px] flex items-center">
+                  <span className="text-[#09afa6] font-mono text-[11px] font-semibold flex items-center">
                     <Sparkles className="w-3.5 h-3.5 mr-1" />
                     Auto-Adjusted Metrics
                   </span>
@@ -132,10 +132,10 @@ export const ScriptMatrixSection: React.FC = () => {
                 <div className="space-y-1.5">
                   <div className="flex items-center justify-between text-[11px] text-zinc-400">
                     <span>Vinbox Localized &amp; Typeset Rendering</span>
-                    <span className="font-mono text-emerald-600 font-semibold">Zero Text Clipping</span>
+                    <span className="font-mono text-[#09afa6] font-semibold">Zero Text Clipping</span>
                   </div>
-                  <div className="p-4 rounded-lg bg-white border-2 border-indigo-100 text-sm font-semibold text-zinc-900 shadow-2xs">
-                    <p className="text-base sm:text-lg leading-relaxed text-indigo-950 font-medium">
+                  <div className="p-4 rounded-lg bg-white border-2 border-[#0b5d6c]/30 text-sm font-semibold text-zinc-900 shadow-2xs">
+                    <p className="text-base sm:text-lg leading-relaxed text-[#063740] font-medium">
                       {activeFamily.sampleLocalized}
                     </p>
                   </div>
@@ -155,7 +155,7 @@ export const ScriptMatrixSection: React.FC = () => {
               <div className="text-right">
                 <a
                   href="#contact"
-                  className="text-xs font-semibold text-zinc-900 hover:text-indigo-600 inline-flex items-center underline underline-offset-4"
+                  className="text-xs font-semibold text-[#0b5d6c] hover:text-[#084955] inline-flex items-center underline underline-offset-4"
                 >
                   Request a sample layout in your target language →
                 </a>

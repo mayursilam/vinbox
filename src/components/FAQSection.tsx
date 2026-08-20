@@ -23,7 +23,7 @@ export const FAQSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#0b5d6c]">
             Frequently Asked Questions
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mt-2">
@@ -42,7 +42,7 @@ export const FAQSection: React.FC = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                   selectedCategory === cat
-                    ? 'bg-zinc-900 text-white shadow-2xs'
+                    ? 'bg-[#0b5d6c] text-white shadow-2xs'
                     : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-zinc-900'
                 }`}
               >
@@ -70,7 +70,7 @@ export const FAQSection: React.FC = () => {
                   <span className="text-sm sm:text-base font-bold text-zinc-900 leading-snug">
                     {faq.question}
                   </span>
-                  <div className={`p-1 rounded-md bg-white border border-zinc-200 text-zinc-600 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 bg-zinc-900 text-white border-zinc-900' : ''}`}>
+                  <div className={`p-1 rounded-md bg-white border border-zinc-200 text-zinc-600 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 bg-[#0b5d6c] text-white border-[#0b5d6c]' : ''}`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
@@ -88,14 +88,14 @@ export const FAQSection: React.FC = () => {
         {/* Support contact note */}
         <div className="mt-10 p-5 rounded-xl bg-zinc-50 border border-zinc-200/80 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center space-x-3 text-xs text-zinc-700">
-            <HelpCircle className="w-5 h-5 text-indigo-600 shrink-0" />
+            <HelpCircle className="w-5 h-5 text-[#09afa6] shrink-0" />
             <span>
               Have a question not listed here? Our production team responds within 2 hours.
             </span>
           </div>
           <a
             href={`mailto:${COMPANY_INFO.email}?subject=DTP%20Inquiry`}
-            className="text-xs font-bold text-zinc-900 hover:text-indigo-600 shrink-0 inline-flex items-center space-x-1 underline underline-offset-4"
+            className="text-xs font-bold text-[#0b5d6c] hover:text-[#084955] shrink-0 inline-flex items-center space-x-1 underline underline-offset-4"
           >
             <Mail className="w-3.5 h-3.5 mr-1" />
             <span>Email our technical team directly</span>

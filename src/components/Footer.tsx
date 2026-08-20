@@ -20,14 +20,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) =>
           
           {/* Col 1: Brand & Positioning (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 rounded-lg bg-zinc-900 flex items-center justify-center text-white font-bold tracking-tight text-base">
-                V
-              </div>
-              <span className="text-xl font-bold tracking-tight text-zinc-900 leading-none">
-                VINBOX
-              </span>
-            </div>
+            <a href="#" className="inline-block">
+              <img
+                src="/assets/vinbox_logo.png"
+                alt="Vinbox DTP & Localisation"
+                className="h-8 sm:h-9 w-auto object-contain"
+              />
+            </a>
 
             <p className="text-zinc-600 text-xs leading-relaxed max-w-sm">
               Specialized Multilingual Desktop Publishing (DTP) &amp; typesetting agency based in Pune, India. Formatting in InDesign, FrameMaker, and Illustrator across 100+ languages for global agencies.
@@ -35,11 +34,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) =>
 
             <div className="pt-2 text-xs space-y-1.5 text-zinc-500">
               <div className="flex items-center space-x-2">
-                <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-[#09afa6] shrink-0" />
                 <span>{COMPANY_INFO.isoStandards}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Globe className="w-4 h-4 text-indigo-600 shrink-0" />
+                <Globe className="w-4 h-4 text-[#0b5d6c] shrink-0" />
                 <span>Serving global agencies in US, EU, UK &amp; APAC</span>
               </div>
             </div>
@@ -55,7 +54,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) =>
                 <li key={srv.id}>
                   <a
                     href="#services"
-                    className="hover:text-zinc-900 transition-colors block text-xs"
+                    className="hover:text-[#0b5d6c] transition-colors block text-xs"
                   >
                     {srv.title}
                   </a>
@@ -70,14 +69,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) =>
               Navigation
             </h4>
             <ul className="space-y-2">
-              <li><a href="#about" className="hover:text-zinc-900 transition-colors">About Vinbox</a></li>
-              <li><a href="#scripts" className="hover:text-zinc-900 transition-colors">Scripts Matrix</a></li>
-              <li><a href="#portfolio" className="hover:text-zinc-900 transition-colors">Portfolio &amp; Work</a></li>
-              <li><a href="#process" className="hover:text-zinc-900 transition-colors">Production Process</a></li>
-              <li><a href="#estimator" className="hover:text-zinc-900 transition-colors">Scope Estimator</a></li>
-              <li><a href="#testimonials" className="hover:text-zinc-900 transition-colors">Testimonials</a></li>
-              <li><a href="#faq" className="hover:text-zinc-900 transition-colors">FAQ</a></li>
-              <li><a href="#contact" className="hover:text-zinc-900 transition-colors font-semibold text-zinc-900">Request a Quote</a></li>
+              <li><a href="#about" className="hover:text-[#0b5d6c] transition-colors">About Vinbox</a></li>
+              <li><a href="#scripts" className="hover:text-[#0b5d6c] transition-colors">Scripts Matrix</a></li>
+              <li><a href="#portfolio" className="hover:text-[#0b5d6c] transition-colors">Portfolio &amp; Work</a></li>
+              <li><a href="#process" className="hover:text-[#0b5d6c] transition-colors">Production Process</a></li>
+              <li><a href="#estimator" className="hover:text-[#0b5d6c] transition-colors">Scope Estimator</a></li>
+              <li><a href="#testimonials" className="hover:text-[#0b5d6c] transition-colors">Testimonials</a></li>
+              <li><a href="#faq" className="hover:text-[#0b5d6c] transition-colors">FAQ</a></li>
+              <li><a href="#contact" className="text-[#0b5d6c] hover:underline font-semibold">Request a Quote</a></li>
             </ul>
           </div>
 
@@ -88,18 +87,18 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) =>
             </h4>
             <div className="space-y-2.5 text-zinc-600 text-xs">
               <p className="flex items-start space-x-2">
-                <MapPin className="w-4 h-4 text-zinc-400 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#0b5d6c] shrink-0 mt-0.5" />
                 <span>{COMPANY_INFO.fullAddress}</span>
               </p>
               <p className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-zinc-400 shrink-0" />
-                <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-zinc-900 font-medium">
+                <Mail className="w-4 h-4 text-[#0b5d6c] shrink-0" />
+                <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-[#0b5d6c] font-medium">
                   {COMPANY_INFO.email}
                 </a>
               </p>
               <p className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-zinc-400 shrink-0" />
-                <a href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`} className="hover:text-zinc-900 font-medium">
+                <Phone className="w-4 h-4 text-[#0b5d6c] shrink-0" />
+                <a href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`} className="hover:text-[#0b5d6c] font-medium">
                   {COMPANY_INFO.phone}
                 </a>
               </p>

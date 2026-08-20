@@ -29,11 +29,11 @@ export const PrivacyModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         </button>
 
         <div className="flex items-center space-x-3 mb-5">
-          <div className="p-2 rounded-lg bg-indigo-50 text-indigo-600">
+          <div className="p-2 rounded-lg bg-[#e8f4f6] text-[#0b5d6c]">
             <Shield className="w-5 h-5" />
           </div>
           <div>
-            <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-600">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#0b5d6c]">
               Legal &amp; Compliance
             </span>
             <h3 className="text-xl font-bold text-zinc-900">
@@ -57,7 +57,7 @@ export const PrivacyModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
           <h4 className="font-bold text-zinc-900 text-sm pt-2">2. Strict Bilateral NDA Enforcement</h4>
           <p>
-            We execute standard or custom mutual Non-Disclosure Agreements (NDAs) with language service providers, advertising agencies, and corporate clients prior to file transfers. All internal DTP operators in our Pune facility are legally bound by stringent confidentiality agreements.
+            We execute standard or mutual Non-Disclosure Agreements (NDAs) with language service providers, advertising agencies, and corporate clients prior to file transfers. All internal DTP operators in our Pune facility are legally bound by stringent confidentiality agreements.
           </p>
 
           <h4 className="font-bold text-zinc-900 text-sm pt-2">3. Data Retention &amp; Secure Disposal</h4>
@@ -67,7 +67,7 @@ export const PrivacyModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
           <h4 className="font-bold text-zinc-900 text-sm pt-2">4. Inquiries &amp; Compliance Contact</h4>
           <p>
-            For questions regarding privacy, security credentials, or data handling, reach out directly to our Data Protection Officer at <a href={`mailto:${COMPANY_INFO.email}`} className="text-indigo-600 font-semibold underline">{COMPANY_INFO.email}</a>.
+            For questions regarding privacy, security credentials, or data handling, reach out directly to our Data Protection Officer at <a href={`mailto:${COMPANY_INFO.email}`} className="text-[#0b5d6c] font-semibold underline">{COMPANY_INFO.email}</a>.
           </p>
         </div>
 
@@ -75,7 +75,7 @@ export const PrivacyModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           <button
             type="button"
             onClick={onClose}
-            className="px-4 py-2 text-xs font-semibold rounded-lg bg-zinc-900 text-white hover:bg-zinc-800 transition-colors"
+            className="px-4 py-2 text-xs font-semibold rounded-lg bg-[#0b5d6c] text-white hover:bg-[#084955] transition-colors cursor-pointer"
           >
             Close Window
           </button>
@@ -107,11 +107,11 @@ export const TermsModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         </button>
 
         <div className="flex items-center space-x-3 mb-5">
-          <div className="p-2 rounded-lg bg-indigo-50 text-indigo-600">
+          <div className="p-2 rounded-lg bg-[#e8f4f6] text-[#0b5d6c]">
             <FileText className="w-5 h-5" />
           </div>
           <div>
-            <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-600">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#0b5d6c]">
               Agency Terms
             </span>
             <h3 className="text-xl font-bold text-zinc-900">
@@ -153,7 +153,7 @@ export const TermsModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           <button
             type="button"
             onClick={onClose}
-            className="px-4 py-2 text-xs font-semibold rounded-lg bg-zinc-900 text-white hover:bg-zinc-800 transition-colors"
+            className="px-4 py-2 text-xs font-semibold rounded-lg bg-[#0b5d6c] text-white hover:bg-[#084955] transition-colors cursor-pointer"
           >
             Close Window
           </button>
